@@ -1,0 +1,18 @@
+.show_mobile {
+  position: relative;
+  display: none;
+}
+
+.show_desktop {
+  display: initial;
+}
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  .show_mobile {
+    display: initial;
+  }
+
+  .show_desktop {
+    display: none;
+  }
+}

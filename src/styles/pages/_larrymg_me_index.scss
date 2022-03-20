@@ -1,0 +1,318 @@
+html {
+  scroll-padding: var(--site_wide--scroll_padding);
+}
+
+main#larrymg_me_index {
+  justify-content: center;
+  align-items: center;
+}
+
+/* #region Content */
+
+/* NOTE: div.larrymg_me--content is a COMPONENT shared across several webpages.  
+      To view its code, see "_content.scss" in scss -- components folder. */
+
+/* #region Content -- Block Quote */
+
+/* NOTE: Content -- Block Quote is a COMPONENT shared across several webpages.  
+      To view its code, see "_block_quotes.scss" in scss -- components folder. */
+
+/* #endregion Content -- Block Quote */
+
+/* #region Index -- Hello  */
+
+div.larrymg_me_index--hello {
+  width: 80%;
+}
+
+div.larrymg_me_index--hello h1 {
+  margin: 10px 0px;
+  font-family: cursive_flourish, cursive;
+  font-size: 6rem;
+}
+
+div.larrymg_me_index--hello img {
+  margin: 0 auto;
+  width: 30%;
+  min-width: 218px;
+  max-width: 300px;
+  height: 30%;
+  min-height: 218px;
+  max-height: 300px;
+}
+
+div.larrymg_me_index--hello p:first-of-type {
+  font-size: 2.25rem;
+}
+
+div.larrymg_me_index--hello p:nth-of-type(2) {
+  font-size: 1.75rem;
+  margin: 20px 0px;
+}
+
+span#current_location {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 5px;
+  padding: 2px 0px;
+  border: 1px solid lightblue;
+  background: white;
+  text-align: center;
+}
+
+/* #endregion Index -- Hello */
+
+/* #region Index -- Intro */
+
+div.larrymg_me_index--intro {
+  text-indent: 3%;
+  width: 60%;
+  max-width: 55ch;
+}
+
+div.larrymg_me_index--intro p {
+  // Hacky layout & spacing fix!  Address when I refactor & consolidate CSS!
+  padding: 20px 0px;
+}
+
+/* #endregion Index -- Intro */
+
+/* #region Index -- Explore */
+
+/* #region Index -- Explore Concise */
+
+div.larrymg_me--content div.explore_concise {
+  width: 80%;
+  max-width: 1102px;
+  margin: 50px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+}
+
+div.larrymg_me--content
+  div.explore_concise
+  div.concise_menu_instructions-nav_gray_block_and_text {
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid #cecece;
+}
+
+div.concise_menu_instructions-nav_gray_block_and_text
+  h2.concise_menu_instructions-nav_gray_block {
+  // Hacky fix: Refactor CSS so flexbox consistently formats everything!
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  background: rgba(206, 206, 206, 0.45);
+  font-size: 1.25rem;
+  width: 80%;
+}
+
+div.concise_menu_instructions-nav_gray_block_and_text
+  div.concise_menu_instructions-text {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.concise_menu_instructions-nav_gray_block_and_text
+  div.concise_menu_instructions-text
+  p {
+  max-width: 55ch;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.concise_menu_instructions-nav_gray_block_and_text
+  div.concise_menu_instructions-text
+  p:first-of-type {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "cursive_flourish", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+div.concise_menu_instructions-nav_gray_block_and_text
+  div.concise_menu_instructions-text
+  p:last-of-type {
+  margin-bottom: 20px;
+}
+
+div.larrymg_me--content div.explore_concise div.explore_link_roll {
+  justify-content: space-evenly;
+  max-width: 100%;
+}
+
+div.larrymg_me--content div.explore_concise div.explore_link_roll a {
+  padding: 15px;
+}
+
+/* #endregion Index -- Explore Concise */
+
+/* #region Index -- Explore Verbose  & Explore Items */
+
+div.larrymg_me--content nav.explore_verbose {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 90%;
+  max-width: 1102px;
+  /* To prevent scrolling to right. */
+  // overflow: hidden;
+}
+
+div.explore_item {
+  justify-content: center;
+  align-items: center;
+  // min-height: 225px;
+  // width: clamp(300px, 35%, 500px);
+  margin: 12px;
+  width: 332.65px;
+  border: 1px solid black;
+  padding: 5px;
+  background: #cecece;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+div.explore_item:hover {
+  background: #fff9fb;
+  transform: scale(1.045);
+}
+
+div.explore_item h3 {
+  /* Use flex-grow to produce a semi-centered alignment of card text
+      across cards. */
+  flex-grow: 1;
+  text-align: center;
+  /* Bottom margin ensures a minimal amount of space between h2 &
+      proceeding p element on cards with more text. */
+  margin-bottom: 3%;
+  max-width: 20ch;
+  color: #252627;
+  font-family: "cursive_flourish";
+}
+
+div.explore_item p {
+  /* Use flex-grow to ensure chenvron icons are flush with bottom of card, 
+  regardless of how much text is in indivudal cards. */
+  flex-grow: 1;
+  /* Prevents overly long lines on smaller screens when cards explore_item divs
+      stack one on top of the other. */
+  max-width: 40ch;
+  padding: 5px 10px;
+  color: rgba(128, 128, 128, 0.6);
+  transition: color 0.5s ease-in-out;
+}
+
+div.explore_item:hover p {
+  color: black;
+}
+
+div.explore_item p + a {
+  /* Styles chevrons at bottom of cards that link back to nav menu. */
+  text-decoration: none;
+  /* Use adjacent sibling selector to prevent resizing of linked h2 elements. */
+  font-size: 1.25rem;
+  transition: transform 0.25s linear;
+}
+
+div.explore_item a:hover,
+div.explore_item a:focus {
+  /* Move chevrons at bottom of cards up slightly & enalrge on hover. */
+  transform: translateY(-5px) scale(1.2);
+}
+
+div.explore_item i {
+  margin-top: 5px;
+}
+
+/* #region Index -- Explore Verbose & Explore Items -- My Work */
+
+p#my_work-current_job_status {
+  flex-grow: 0;
+  display: inline-block;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  padding: 4px;
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: black;
+  transition: all 0.25s ease-in-out;
+}
+
+div.explore_item:hover p#my_work-current_job_status {
+  background: blue;
+  color: white;
+}
+
+/* #endregion Index -- Explore Verbose & Explore Items -- My Work */
+
+/* #endregion Index -- Explore Verbose & Explore Items */
+
+/* #endregion Content -- Explore */
+
+/* #endregion Content */
+
+/* #region Media Queries */
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  div.larrymg_me--grid_container--sidebar_and_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+  }
+
+  div.larrymg_me--content {
+    padding: 0px 5px;
+  }
+
+  div.larrymg_me--content div.block_quotes {
+    max-width: 90%;
+    margin-top: 10px;
+  }
+
+  div.larrymg_me_index--hello {
+    max-width: 90%;
+  }
+
+  div.larrymg_me_index--hello p:first-of-type {
+    font-size: 2.25rem;
+  }
+
+  div.larrymg_me_index--hello img {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+  }
+
+  p#my_work-current_job_status {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1069px) {
+  /* Tweak layout of Conciuse Menu Instructions on flex-wrap. */
+  p#explore_concise_menu-instructions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 5px solid #cecece;
+    padding-bottom: 15px;
+  }
+
+  p#explore_concise_menu-instructions span:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+/* #endregion Media Queries */

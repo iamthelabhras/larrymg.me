@@ -1,0 +1,41 @@
+.clean_break_on_wrap {
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.code {
+  line-height: 1.55;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0px 15px;
+  background: whitesmoke;
+  font-family: monospace;
+  color: grey;
+}
+
+.cursive {
+  font-family: cursive_flourish, cursive;
+}
+
+.javascript_variable {
+  display: inherit;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.pending_hyperlink {
+  font-style: italic;
+  color: #cecece;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_bold {
+  font-weight: 700;
+}
+
+.text_emphasis {
+  font-style: italic;
+}

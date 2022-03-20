@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>larrymg.me | Snippets</title>
+    <meta name="description" content="Code snippets!" />
+    <meta
+      name="keywords"
+      content="Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, personal websites, front-end web developer, front end web developer, web developer"
+    />
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow" />
+    <!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow" />
+    <!-- Google Specific -->
+    <!-- Tells Google not to show the sitelinks search box -->
+    <meta name="google" content="nositelinkssearchbox" />
+    <!-- Geo tags -->
+    <meta name="ICBM" content="39.9526, 75.1652" />
+    <meta name="geo.position" content="39.9526;75.1652" />
+    <meta name="geo.region" content="US-PA" />
+    <meta name="geo.placename" content="Philadelphia" />
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content="https://larrymg.me/snippets" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Labhrás (Larry) Mac Gabhann's Code Snippets"
+    />
+    <meta
+      property="og:image"
+      content="https://larrymg.me/images/celtic_harp_vaporwave.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Purple outline of a Celtic harp centered within a vaporwave landscape of dark grey rectangles & triangles."
+    />
+    <meta
+      property="og:description"
+      content="A collection of somewhat useful, always interesting, smaller-than-a-bread-box-sized chunks of code I've created, adapted, or gently tweaked to help me tackle specific problems and use cases."
+    />
+    <meta property="og:site_name" content="Code Snippets" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Labhrás (Larry) Mac Gabhann" />
+    <!-- Styling & Fonts -->
+    <link rel="preload" href="../scss/main.scss" as="style" />
+    <link
+      rel="preload"
+      href="../fonts/helvetia-verbundene.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="preload" href="../fonts/KulimPark-Regular.ttf"" as="font"
+    type="font/ttf" crossorigin> <link rel="preload"
+    href="../fonts/KulimPark-Bold.ttf"" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="../fonts/KulimPark-Italic.ttf"" as="font"
+    type="font/ttf" crossorigin> <link rel="preload"
+    href="../fonts/KulimPark-SemiBoldItalic.ttf"" as="font" type="font/ttf"
+    crossorigin>
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <!-- Favicon Settings 
+            Generated using: https://realfavicongenerator.net -->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon-16x16.png"
+    />
+    <link rel="manifest" href="../site.webmanifest" />
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
+  </head>
+  <body id="scoped_to_snippets">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <main class="sidebar_and_content">
+      <div class="larrymg_me--grid_container--sidebar_and_content">
+        <!-- #region Sidebar -->
+        <aside class="flexbox_basic--column larrymg_me--sidebar">
+          <!-- #region Side Bar -- This Week -->
+          <div class="this_week" id="what_im_learning">
+            <h2>
+              What I'm Learning
+              <span class="clean_break_on_wrap">This Week</span>:
+            </h2>
+            <ul id="what_im_learning_list"></ul>
+          </div>
+          <div class="this_week" id="what_im_reading">
+            <h2>
+              What I'm Reading
+              <span class="clean_break_on_wrap">This Week:</span>
+            </h2>
+            <ul id="what_im_reading_list"></ul>
+          </div>
+          <div class="this_week" id="what_im_watching">
+            <h2>
+              What I'm Watching
+              <span class="clean_break_on_wrap">This Week</span>:
+            </h2>
+            <ul id="what_im_watching_list"></ul>
+          </div>
+          <div class="this_week" id="this_weeks_hot_track">
+            <h2>
+              This Week's <span class="clean_break_on_wrap">Hot Track:</span>
+            </h2>
+            <div id="hot_track_container"></div>
+          </div>
+          <div class="this_week" id="this_weeks_hot_laugh">
+            <h2>
+              This Week's <span class="clean_break_on_wrap">Hot Laugh:</span>
+            </h2>
+            <div id="hot_laugh_container"></div>
+          </div>
+          <!-- #endregion Side Bar -- This Week -->
+          <!-- #region Let's Connect -->
+          <div class="lets_connect">
+            <h2>Let's Connect!</h2>
+            <div class="flexbox_basic--row lets_connect_links">
+              <a
+                href=""
+                target="_blank"
+                class="flexbox_basic--row"
+                data-lets_connect="twitter"
+                ><i
+                  class="fab fa-twitter-square"
+                  width="2.75rem"
+                  height="2.75rem"
+                ></i
+              ></a>
+              <a
+                href=""
+                target="_blank"
+                class="flexbox_basic--row"
+                data-lets_connect="linkedin"
+                ><i class="fab fa-linkedin" width="2.75rem" height="2.75rem"></i
+              ></a>
+              <a
+                href=""
+                target="_blank"
+                class="flexbox_basic--row"
+                data-lets_connect="spotify"
+                ><i class="fab fa-spotify" width="2.75rem" height="2.75rem"></i
+              ></a>
+              <a
+                href=""
+                target="_blank"
+                class="flexbox_basic--row"
+                data-lets_connect="letterboxd"
+                ><i class="fas fa-film" width="2.75rem" height="2.75rem"></i
+              ></a>
+              <a
+                href=""
+                class="flexbox_basic--row"
+                data-lets_connect="emailPersonal"
+                ><i
+                  class="fas fa-envelope-square"
+                  width="2.75rem"
+                  height="2.75rem"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <!-- #endregion Let's Connect -->
+        </aside>
+        <!-- #endregion -->
+        <!-- #region Content -->
+        <div class="larrymg_me--content">
+          <!-- #region Content -- Block Quotes -->
+          <div class="block_quotes">
+            <p>
+              "Think you're escaping and run into yourself. Longest way round is
+              the shortest way home."
+            </p>
+
+            <span class="block_quote--attribution">James Joyce</span>
+            <a
+              href="https://libgen.is/book/index.php?md5=F669ADEC40E56A9DD82D47EE0C733795"
+              target="_blank"
+              ><span>Ulysses</span></a
+            >
+          </div>
+          <!-- #endregion Content -- Block Quotes -->
+
+          <!-- #region Code Snippets Heading -->
+          <section
+            class="flexbox_basic--column"
+            id="container--home_and_header"
+          >
+            <h1 class="text_center">Code Snippets</h1>
+            <a href="../index.html"
+              ><i class="fas fa-home" width="48px" height="42px"></i
+            ></a>
+          </section>
+          <!-- #endregion Code Snippets Heading -->
+          <!-- #region Sounds of Marathon Christmas -->
+          <h2>
+            The Sounds of
+            <span class="clean_break_on_wrap">MARATHON CHRISTMAS</span>
+          </h2>
+          <div class="snippet_description_container">
+            <div class="snippet_description_card">
+              <h3>Snippet Description</h3>
+              <p>
+                This is a modified version of
+                <a
+                  href="https://www.youtube.com/watch?v=VuN8qwZoego"
+                  target="_blank"
+                  >Wes Bos' JavaScript 30 Drum Machine</a
+                >.
+              </p>
+              <p>
+                Press the keys (e.g. "1", "2", "3") listed in the
+                <span id="pink_bar">pink bars</span> beneath each block-letter
+                to play a Christmas sound effect and trigger a CSS
+                transformation! There's a really clever use of data-attributes
+                going on underneath the hood that stitches everything together.
+              </p>
+              <p>
+                Oh, and don't forget to tune into Jon Solomon's annual 25-hour
+                holiday marathon on WPRBXmas this coming Christmas Eve at 5:00pm
+                EST!
+              </p>
+              <p>
+                All sound effects were downloaded from
+                <a href="https://freesound.org" target="_blank">freesound.org</a
+                >.
+              </p>
+            </div>
+            <div class="snippet_description_card">
+              <h3>Snippet Use Case</h3>
+              <p>
+                While tweaking Wes' tutorial to create a sound maker for my
+                <a href="https://marathon.christmas">MARATHON CHRISTMAS</a> side
+                project, I quickly discovered I needed to extend his use of
+                event listeners.
+              </p>
+              <p>
+                In Wes' implementation, the addition & removal of classes on a
+                given div whenever a sound was played was handled entirely via
+                <span class="text_bold">key-driven events</span>. This worked
+                fine when the sounds being sampled were extremely short, but
+                longer samples resulted in a sub-par user experience. I rewrote
+                the underlying code so that a given div's class was removed
+                after an audio element's sound had finished playing.
+              </p>
+            </div>
+          </div>
+          <div class="snippet_code_container" id="sounds_of_marathon_christmas">
+            <div class="container--keys">
+              <div class="keys">
+                <div data-key="49" class="key">
+                  <kbd>M</kbd>
+                  <span class="sound">1</span>
+                </div>
+                <div data-key="50" class="key">
+                  <kbd>E</kbd>
+                  <span class="sound">2</span>
+                </div>
+                <div data-key="51" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">3</span>
+                </div>
+                <div data-key="52" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">4</span>
+                </div>
+                <div data-key="53" class="key">
+                  <kbd>Y</kbd>
+                  <span class="sound">5</span>
+                </div>
+                <div data-key="54" class="key">
+                  <kbd>C</kbd>
+                  <span class="sound">6</span>
+                </div>
+                <div data-key="55" class="key">
+                  <kbd>H</kbd>
+                  <span class="sound">7</span>
+                </div>
+                <div data-key="56" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">8</span>
+                </div>
+                <div data-key="57" class="key">
+                  <kbd>I</kbd>
+                  <span class="sound">9</span>
+                </div>
+                <div data-key="48" class="key">
+                  <kbd>S</kbd>
+                  <span class="sound">0</span>
+                </div>
+                <div data-key="190" class="key">
+                  <kbd>T</kbd>
+                  <span class="sound">.</span>
+                </div>
+                <div data-key="188" class="key">
+                  <kbd>M</kbd>
+                  <span class="sound">,</span>
+                </div>
+                <div data-key="59" class="key">
+                  <kbd>A</kbd>
+                  <span class="sound">;</span>
+                </div>
+                <div data-key="219" class="key">
+                  <kbd>S</kbd>
+                  <span class="sound">[</span>
+                </div>
+                <div data-key="221" class="key">
+                  <kbd>!</kbd>
+                  <span class="sound">]</span>
+                </div>
+              </div>
+            </div>
+
+            <audio
+              data-key="49"
+              src="../audio/snippets/sounds_of_marathon_christmas/carol_of_bells.mp3"
+            ></audio>
+            <audio
+              data-key="50"
+              src="../audio/snippets/sounds_of_marathon_christmas/deck_the_halls.wav"
+            ></audio>
+            <audio
+              data-key="51"
+              src="../audio/snippets/sounds_of_marathon_christmas/elf_sings_jingle_bells.wav"
+            ></audio>
+            <audio
+              data-key="52"
+              src="../audio/snippets/sounds_of_marathon_christmas/feliz_navidad_chorus.mp3"
+            ></audio>
+            <audio
+              data-key="53"
+              src="../audio/snippets/sounds_of_marathon_christmas/happy_holidays.wav"
+            ></audio>
+            <audio
+              data-key="54"
+              src="../audio/snippets/sounds_of_marathon_christmas/ho_ho_ho.wav"
+            ></audio>
+            <audio
+              data-key="55"
+              src="../audio/snippets/sounds_of_marathon_christmas/izzy_fruit_cake.mp3"
+            ></audio>
+            <audio
+              data-key="56"
+              src="../audio/snippets/sounds_of_marathon_christmas/kid_carol_ending.mp3"
+            ></audio>
+            <audio
+              data-key="57"
+              src="../audio/snippets/sounds_of_marathon_christmas/merry_christmas_darling.wav"
+            ></audio>
+            <audio
+              data-key="58"
+              src="../audio/snippets/sounds_of_marathon_christmas/organ.wav"
+            ></audio>
+            <audio
+              data-key="59"
+              src="../audio/snippets/sounds_of_marathon_christmas/satellite_merry_christmas_happy_new_year.mp3"
+            ></audio>
+            <audio
+              data-key="48"
+              src="../audio/snippets/sounds_of_marathon_christmas/three_french_hens.wav"
+            ></audio>
+            <audio
+              data-key="190"
+              src="../audio/snippets/sounds_of_marathon_christmas/twinkle.wav"
+            ></audio>
+            <audio
+              data-key="188"
+              src="../audio/snippets/sounds_of_marathon_christmas/electronic_christmas_decoration.mp3"
+            ></audio>
+            <audio
+              data-key="219"
+              src="../audio/snippets/sounds_of_marathon_christmas/whistle_christmas_song.wav"
+            ></audio>
+            <audio
+              data-key="221"
+              src="../audio/snippets/sounds_of_marathon_christmas/five_golden_rings.wav"
+            ></audio>
+          </div>
+          <!-- #endregion Sounds of Marathon Christmas -->
+          <!-- #endregion Content -- Pseudo-Nav -->
+          <p class="show_mobile show_mobile-encourage_larger_screen">
+            <i class="fas fa-mobile-alt"></i>
+            <span>
+              You're currently viewing the mobile version of my homepage. That's
+              totally fine, but you should seriously considering viewing this
+              site on a larger screen if you want the full "larrymg.me"
+              experience!</span
+            >
+          </p>
+        </div>
+
+        <!--#endregion Content -->
+      </div>
+      <!-- Closes grid container -->
+    </main>
+    <footer class="flexbox_basic--column">
+      <div class="show_mobile" id="mobile_version_alert">
+        <i class="fas fa-mobile-alt"></i>
+        <p>
+          You're currently viewing the mobile version of larrymg.me. That's
+          totally fine! Just keep in mind certain site features can only be seen
+          on larger screens.
+        </p>
+      </div>
+      <nav aria-role="footer_navigation" class="flexbox_basic--row">
+        <ul>
+          <h3>Site Navigation</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="https://wiki.larrymg.me" target="_blank">Site Wiki</a>
+            </li>
+          </ul>
+          <ul>
+            <li><a href="/my_work">My Work</a></li>
+            <li><a href="/what_i_use">What I Use</a></li>
+            <li>
+              <a href="/my_web_dev_journey" target="_blank"
+                >My Web Dev Journey</a
+              >
+            </li>
+            <li>
+              <a href="/web_dev_learning_resources"
+                >Web Dev Learning Resources</a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li><a href="/coding_rules">Coding Rules & Assumptions</a></li>
+            <li><a href="/personal_rules">Personal Rules & Assumptions</a></li>
+          </ul>
+          <ul>
+            <li><a href="/snippets">Snippets</a></li>
+            <li><a href="/css_lab">CSS Lab</a></li>
+            <li><a href="/js_lab">JavaScript Lab</a></li>
+          </ul>
+          <ul>
+            <li><a href="/polymathy">Polymathy</a></li>
+            <li><a href="/ing_system">ING System</a></li>
+            <li><a href="/commonplace_book">Commonplace Book</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/conspiracy_against_larry"
+                >The Conspiracy Against Larry</a
+              >
+            </li>
+          </ul>
+        </ul>
+      </nav>
+      <div id="site_performance">
+        <ul>
+          <h3>Site Performance</h3>
+          <ul>
+            <li>
+              <a href="">Site Map</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/iamthelabhras/larrymg.me"
+                target="_blank"
+                >Github</a
+              >
+            </li>
+          </ul>
+          <ul id="footer__coded_with">
+            <h4>Coded With ❤️ Using:</h4>
+            <div class="flexbox_basic--row">
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                  target="_blank"
+                  >HTML</a
+                >
+              </li>
+              <li><a href="https://sass-lang.com/" target="_blank">Sass</a></li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                  target="_blank"
+                  >Vanilla JavaScript</a
+                >
+              </li>
+            </div>
+          </ul>
+          <ul id="footer__test_performance">
+            <li>
+              <a
+                href="https://pagespeed.web.dev/report?url=https%3A%2F%2Flarrymg.me%2Fhttps://larrymg.me"
+                target="_blank"
+              >
+                Pagespeed Insights
+              </a>
+            </li>
+            <li>
+              <a href="https://www.deadlinkchecker.com/" target="_blank">
+                Deadlink Checker
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li class="pending_hyperlink">Report A Bug</li>
+            <li class="pending_hyperlink">Suggest A Feature</li>
+          </ul>
+        </ul>
+      </div>
+      <span id="footer__site_copyleft"
+        ><a href="https://www.gnu.org/licenses/copyleft.en.html" target="_blank"
+          >Copyleft</a
+        >
+        2022 | Labhrás Mac Gabhann |
+        <a href="mailto:hello@larrymg.me">hello@larrymg.me</a></span
+      >
+      <span
+        ><a href="https://www.youtube.com/watch?v=RJudJ9S579A" target="_blank"
+          >"One faithful harp shall praise thee."</a
+        ></span
+      >
+    </footer>
+    <!-- #region Scripts -->
+    <script
+      src="https://kit.fontawesome.com/d2b0003921.js"
+      crossorigin="anonymous"
+      async
+      defer
+    ></script>
+    <script src="../js/snippets/sounds_of_marathon_christmas.js"></script>
+    <script src="../js/snippets.js" type="module"></script>
+    <script src="../js/loader.js"></script>
+    <!-- #endregion Scripts  -->
+  </body>
+  <!-- #region Loader -->
+  <div class="loader_container">
+    <div class="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <!-- #endregion Loader -->
+</html>
