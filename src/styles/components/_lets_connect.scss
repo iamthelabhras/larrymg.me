@@ -33,12 +33,15 @@ div.lets_connect_links {
     color: black;
   }
 
-  i {
-    font-size: 2.5rem;
+  img {
+    width: 35px;
+    height: 35px;
     transition: all 0.25s ease-in-out;
   }
 
-  i:hover {
-    font-size: 2.75rem;
+  img:hover {
+    width: 45px;
+    height: 45px;
+    rotate: 360deg;
   }
 }

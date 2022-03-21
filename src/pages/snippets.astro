@@ -1,0 +1,337 @@
+---
+
+// Style Imports
+import '../styles/main.scss';
+
+// Component Imports
+import StaticHead from "../components/StaticHead.astro";
+import Sidebar from "../components/Sidebar.astro";
+import ThisWeek from "../components/ThisWeek.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+// Layout Imports
+import SidebarAndContent from "../layouts/SidebarAndContent.astro";
+
+// Framework Imports 
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+// CHANGING <HEADER> VARIABLES
+let pageURL = "https://www.larrymg.me/snippets.html";
+let title = "larrymg.me | Snippets";
+let pageDescription = "A collection of somewhat useful, always interesting, smaller-than-a-bread-box-sized chunks of code I've created, adapted, or gently tweaked to help me tackle specific problems and use cases.";
+let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, personal websites, front-end web developer, front end web developer, web developer";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+
+<html lang="en">
+   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <StaticHead></StaticHead>
+  </head> 
+  <body id="scoped_to_snippets">
+    <main class="sidebar_and_content">
+    <SidebarAndContent>
+    
+        <!-- #region Sidebar -->
+      <Sidebar>
+        <ThisWeek></ThisWeek> 
+        <LetsConnect></LetsConnect>
+      </Sidebar>
+        <!-- #endregion -->
+        <!-- #region Content -->
+        <div class="larrymg_me--content">
+          <!-- #region Content -- Block Quotes -->
+          <div class="block_quotes">
+            <p>
+              "Think you're escaping and run into yourself. Longest way round is
+              the shortest way home."
+            </p>
+
+            <span class="block_quote--attribution">James Joyce</span>
+            <a
+              href="https://libgen.is/book/index.php?md5=F669ADEC40E56A9DD82D47EE0C733795"
+              target="_blank"
+              ><span>Ulysses</span></a
+            >
+          </div>
+          <!-- #endregion Content -- Block Quotes -->
+
+          <!-- #region Code Snippets Heading -->
+          <section
+            class="flexbox_basic--column"
+            id="container--home_and_header"
+          >
+            <h1 class="text_center">Code Snippets</h1>
+            <a href="../index.html"
+              ><i class="fas fa-home" width="48px" height="42px"></i
+            ></a>
+          </section>
+          <!-- #endregion Code Snippets Heading -->
+          <!-- #region Sounds of Marathon Christmas -->
+          <h2>
+            The Sounds of
+            <span class="clean_break_on_wrap">MARATHON CHRISTMAS</span>
+          </h2>
+          <div class="snippet_description_container">
+            <div class="snippet_description_card">
+              <h3>Snippet Description</h3>
+              <p>
+                This is a modified version of
+                <a
+                  href="https://www.youtube.com/watch?v=VuN8qwZoego"
+                  target="_blank"
+                  >Wes Bos' JavaScript 30 Drum Machine</a
+                >.
+              </p>
+              <p>
+                Press the keys (e.g. "1", "2", "3") listed in the
+                <span id="pink_bar">pink bars</span> beneath each block-letter
+                to play a Christmas sound effect and trigger a CSS
+                transformation! There's a really clever use of data-attributes
+                going on underneath the hood that stitches everything together.
+              </p>
+              <p>
+                Oh, and don't forget to tune into Jon Solomon's annual 25-hour
+                holiday marathon on WPRBXmas this coming Christmas Eve at 5:00pm
+                EST!
+              </p>
+              <p>
+                All sound effects were downloaded from
+                <a href="https://freesound.org" target="_blank">freesound.org</a
+                >.
+              </p>
+            </div>
+            <div class="snippet_description_card">
+              <h3>Snippet Use Case</h3>
+              <p>
+                While tweaking Wes' tutorial to create a sound maker for my
+                <a href="https://marathon.christmas">MARATHON CHRISTMAS</a> side
+                project, I quickly discovered I needed to extend his use of
+                event listeners.
+              </p>
+              <p>
+                In Wes' implementation, the addition & removal of classes on a
+                given div whenever a sound was played was handled entirely via
+                <span class="text_bold">key-driven events</span>. This worked
+                fine when the sounds being sampled were extremely short, but
+                longer samples resulted in a sub-par user experience. I rewrote
+                the underlying code so that a given div's class was removed
+                after an audio element's sound had finished playing.
+              </p>
+            </div>
+          </div>
+          <div class="snippet_code_container" id="sounds_of_marathon_christmas">
+            <div class="container--keys">
+              <div class="keys">
+                <div data-key="49" class="key">
+                  <kbd>M</kbd>
+                  <span class="sound">1</span>
+                </div>
+                <div data-key="50" class="key">
+                  <kbd>E</kbd>
+                  <span class="sound">2</span>
+                </div>
+                <div data-key="51" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">3</span>
+                </div>
+                <div data-key="52" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">4</span>
+                </div>
+                <div data-key="53" class="key">
+                  <kbd>Y</kbd>
+                  <span class="sound">5</span>
+                </div>
+                <div data-key="54" class="key">
+                  <kbd>C</kbd>
+                  <span class="sound">6</span>
+                </div>
+                <div data-key="55" class="key">
+                  <kbd>H</kbd>
+                  <span class="sound">7</span>
+                </div>
+                <div data-key="56" class="key">
+                  <kbd>R</kbd>
+                  <span class="sound">8</span>
+                </div>
+                <div data-key="57" class="key">
+                  <kbd>I</kbd>
+                  <span class="sound">9</span>
+                </div>
+                <div data-key="48" class="key">
+                  <kbd>S</kbd>
+                  <span class="sound">0</span>
+                </div>
+                <div data-key="190" class="key">
+                  <kbd>T</kbd>
+                  <span class="sound">.</span>
+                </div>
+                <div data-key="188" class="key">
+                  <kbd>M</kbd>
+                  <span class="sound">,</span>
+                </div>
+                <div data-key="59" class="key">
+                  <kbd>A</kbd>
+                  <span class="sound">;</span>
+                </div>
+                <div data-key="219" class="key">
+                  <kbd>S</kbd>
+                  <span class="sound">[</span>
+                </div>
+                <div data-key="221" class="key">
+                  <kbd>!</kbd>
+                  <span class="sound">]</span>
+                </div>
+              </div>
+            </div>
+
+            <audio
+              data-key="49"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/carol_of_bells.mp3"
+            ></audio>
+            <audio
+              data-key="50"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/deck_the_halls.wav"
+            ></audio>
+            <audio
+              data-key="51"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/elf_sings_jingle_bells.wav"
+            ></audio>
+            <audio
+              data-key="52"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/feliz_navidad_chorus.mp3"
+            ></audio>
+            <audio
+              data-key="53"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/happy_holidays.wav"
+            ></audio>
+            <audio
+              data-key="54"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/ho_ho_ho.wav"
+            ></audio>
+            <audio
+              data-key="55"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/izzy_fruit_cake.mp3"
+            ></audio>
+            <audio
+              data-key="56"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/kid_carol_ending.mp3"
+            ></audio>
+            <audio
+              data-key="57"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/merry_christmas_darling.wav"
+            ></audio>
+            <audio
+              data-key="58"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/organ.wav"
+            ></audio>
+            <audio
+              data-key="59"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/satellite_merry_christmas_happy_new_year.mp3"
+            ></audio>
+            <audio
+              data-key="48"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/three_french_hens.wav"
+            ></audio>
+            <audio
+              data-key="190"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/twinkle.wav"
+            ></audio>
+            <audio
+              data-key="188"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/electronic_christmas_decoration.mp3"
+            ></audio>
+            <audio
+              data-key="219"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/whistle_christmas_song.wav"
+            ></audio>
+            <audio
+              data-key="221"
+              src="../../assets/audio/snippets/sounds_of_marathon_christmas/five_golden_rings.wav"
+            ></audio>
+          </div>
+          <!-- #endregion Sounds of Marathon Christmas -->
+          <!-- #endregion Content -- Pseudo-Nav -->
+          <p class="show_mobile show_mobile-encourage_larger_screen">
+            <i class="fas fa-mobile-alt"></i>
+            <span>
+              You're currently viewing the mobile version of my homepage. That's
+              totally fine, but you should seriously considering viewing this
+              site on a larger screen if you want the full "larrymg.me"
+              experience!</span
+            >
+          </p>
+        </SideBarAndContent>
+
+        <!--#endregion Content -->
+      </div>
+      <!-- Closes grid container -->
+    </main>
+    <Footer></Footer>
+    <!-- #region Scripts -->
+    <script
+      src="https://kit.fontawesome.com/d2b0003921.js"
+      crossorigin="anonymous"
+      async
+      defer
+    ></script>
+    <!-- <script src="../js/snippets/sounds_of_marathon_christmas.js"></script> -->
+    <script>
+   // Declare global variables.
+
+const keys = document.querySelectorAll('.key');
+const sounds = document.querySelectorAll('audio');
+
+// Declare global functions.
+
+function playSound(e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        if(!audio) return; // stop function from running if key struck is not listed on letter block. 
+        audio.currentTime = 0; // rewind to Christmas sound effect to start whenever key is struck. 
+        audio.play();
+        key.classList.add('playing');
+}
+
+function clickLetterBlock () { 
+    alert('Press the key listed in the pink bar to hear a WPRBXmas sound!');
+}
+
+function removeTransition(e) {
+    const activeKey = document.querySelector(`.key[data-key="${e.srcElement.attributes[0].nodeValue}"]`); // Use data within the audio element's event object data to select the appropriate div.
+    activeKey.classList.remove('playing'); 
+}
+
+// Add event listeners
+
+
+sounds.forEach(sound => sound.addEventListener('ended', removeTransition)); // Restyle letter block when Christmas sound effect finishes playing. 
+window.addEventListener('keydown', playSound); // Play Christmas sound effect when appropriate key is struck. 
+keys.forEach(key => key.addEventListener('click', clickLetterBlock)); // Direct users to use keyboard instead of mouse to play samples.
+
+ 
+    
+    </script>
+
+    <!-- #endregion Scripts  -->
+  </body>
+</html>

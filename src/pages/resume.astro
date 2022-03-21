@@ -1,71 +1,57 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+---
+
+// Style Imports
+import '../styles/main.scss';
+
+// Component Imports
+import StaticHead from "../components/StaticHead.astro";
+import Footer from "../components/Footer.astro";
+
+// Framework Imports 
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+// CHANGING <HEADER> VARIABLES
+let pageURL = "https://www.larrymg.me/resume.html";
+let title = "Labhrás (Larry) Mac Gabhann's Resume";
+let pageDescription = "";
+let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, front-end web developer, front end web developer, web developer, resume, available for hire, Philadelphia, CSS, Sass, Parcel, JavaScript, Git, Github, GIMP, Vim, VS Code, Astro, Vue.js, Vue";
+
+let currentlyStudyingImage = "../../assets/images/my_work/resume/mushrooms.svg";
+let currentlyStudyingSubject ="Mycology";
+let latestDiscovery="Lowest Lowest Girl";
+let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>larrymg.me | Labhrás (Larry) Mac Gabhann's Resume</title>
-    <meta
-      name="description"
-      content="The most recent version of front-end developer Labhrás (Larry) Mac Gabhann's resume."
-    />
-    <meta
-      name="keywords"
-      content="Labhras Mac Gabhann, Labhrás Mac Gabhann,
-    Larry Mac Gabhann, Larry MacGabhann, resume, front-end, front end, front-end
-    developer, front end developer, web developer, Philadelphia, CSS, Sass, Parcel, JavaScript, Git, Github, GIMP, WordPress, Vim, VS Code"
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href="../scss/main.scss" as="style" />
-    <link
-      rel="preload"
-      href="../fonts/MonofurForPowerLine.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../scss/main.scss" />
-    <!-- Favicon Settings -->
-    <!-- Generated using: https://realfavicongenerator.net -->
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../favicon-16x16.png"
-    />
-    <link rel="manifest" href="../site.webmanifest" />
-    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <StaticHead></StaticHead>
   </head>
   <body id="scoped_to_resume">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
     <!-- Do not delete this main#id!  It's used in 0-to-1079px @media query. -->
     <main id="my_work--resume">
       <div class="flexbox_basic--row" id="container--home_and_header">
-        <a href="../index.html"
-          ><i class="fas fa-home" width="48px" height="42px"></i
-        ></a>
+        <a href="/"
+          ><img src="../../assets/images/icons/home.png" width="64px" height="64px" />
+        </a>
       </div>
       <div class="resume--container--header_and_columns">
         <header id="resume_header">
@@ -73,7 +59,7 @@
             href="https://labhras.link/213"
             target="_blank"
             id="download_pdf_link"
-            ><img src="../images/my_work/resume/pdf.svg" id="download_pdf"
+            ><img src="../../assets/images/my_work/resume/pdf.svg" id="download_pdf"
           /></a>
           <h1 class="text_center">
             <a href="https://labhras.link/a8w" target="_blank">Labhras</a>
@@ -87,25 +73,25 @@
           <div class="header_contact_info">
             <div>
               <a href="https://labhras.link/1g8" target="_blank">
-                <img src="../images/my_work/resume/twitter.svg" />
+                <img src="../../assets/images/my_work/resume/twitter.svg" />
                 <span>@iamthelabhras</span>
               </a>
             </div>
             <div>
               <a href="tel:267-225-1471">
-                <img src="../images/my_work/resume/phone.png" />
+                <img src="../../assets/images/my_work/resume/phone.png" />
                 <span>(267) - 225 - 1471</span>
               </a>
             </div>
             <div>
               <a href="mailto:working@larrymg.me">
-                <img src="../images/my_work/resume/email.png" />
+                <img src="../../assets/images/my_work/resume/email.png" />
                 <span>working@larrymg.me</span></a
               >
             </div>
             <div>
               <a href="https://labhras.link/i6h" target="_blank">
-                <img src="../safari-pinned-tab.svg" />
+                <img src="../../assets/safari-pinned-tab.svg" />
                 <span>https://larrymg.me </span>
               </a>
             </div>
@@ -145,7 +131,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span> Sass & Parcel.</span>
                     </li>
@@ -161,7 +147,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>
                         HTML, CSS, JavaScript, jQuery, Git, & Github.</span
@@ -169,7 +155,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >CSS-only implementations of an
@@ -185,7 +171,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >CSS-only implementation of a
@@ -205,7 +191,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>GIMP.</span>
                     </li>
@@ -219,7 +205,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >WordPress & WordPress plugins
@@ -258,7 +244,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>HTML & CSS.</span>
                     </li>
@@ -273,7 +259,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Google Drive.</span>
                     </li>
@@ -288,7 +274,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>MailChimp & Calendly.</span>
                     </li>
@@ -302,7 +288,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Canva & GIMP.</span>
                     </li>
@@ -313,7 +299,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >WordPress Plugins
@@ -356,7 +342,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Gmail, Sortd, Boomerang, Trello, & Buffer.</span>
                     </li>
@@ -372,7 +358,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Google Sheets & Proprietary Databases.</span>
                     </li>
@@ -405,7 +391,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Unbounce.</span>
                     </li>
@@ -432,7 +418,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >Received top marks for quality of instruction,
@@ -463,13 +449,13 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span> Microsoft Excel. </span>
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >Collaborated with firm’s financial adviser to create a
@@ -504,7 +490,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         ><span class="text_emphasis"
@@ -519,7 +505,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         ><span class="text_emphasis"
@@ -543,7 +529,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>
                         Bloomberg, CRSP, Compustat, & Microsoft Excel.
@@ -593,7 +579,7 @@
                   <span
                     >Irish Studies
                     <div class="resume_hover">
-                      <img src="../images/my_work/resume/about_hover.png" />
+                      <img src="../../assets/images/my_work/resume/about_hover.png" />
                       <span
                         class="resume_hover_text"
                         id="resume_hover_text--irish_studies"
@@ -671,22 +657,22 @@
                   ><span>HTML, CSS, Sass, JavaScript, Parcel</span
                   ><span class="resume_section_list_item_icons"
                     ><img
-                      src="../images/my_work/resume/html.svg"
+                      src="../../assets/images/my_work/resume/html.svg"
                       alt="HTML5 Icon"
                     /><img
-                      src="../images/my_work/resume/css-3.svg"
+                      src="../../assets/images/my_work/resume/css-3.svg"
                       alt="CSS 3 Icon"
                     />
                     <img
-                      src="../images/my_work/resume/sass.png"
+                      src="../../assets/images/my_work/resume/sass.png"
                       alt="Sass Icon"
                     />
                     <img
-                      src="../images/my_work/resume/javascript.svg"
+                      src="../../assets/images/my_work/resume/javascript.svg"
                       alt="Vanilla JavaScript Icon"
                     />
                     <img
-                      src="../images/my_work/resume/parcel.png"
+                      src="../../assets/images/my_work/resume/parcel.png"
                       alt="Parcel Icon"
                     />
                   </span>
@@ -695,9 +681,9 @@
                   <span>Version Control</span><span>Git & Github</span
                   ><span class="resume_section_list_item_icons">
                     <img
-                      src="../images/my_work/resume/git.svg"
+                      src="../../assets/images/my_work/resume/git.svg"
                       alt="Git Icon" /><img
-                      src="../images/my_work/resume/github.svg"
+                      src="../../assets/images/my_work/resume/github.svg"
                       alt="Github Icon"
                   /></span>
                 </li>
@@ -705,9 +691,9 @@
                   <span>IDEs</span><span>Vim & VS Code</span
                   ><span class="resume_section_list_item_icons">
                     <img
-                      src="../images/my_work/resume/vim.png"
+                      src="../../assets/images/my_work/resume/vim.png"
                       alt="Git Icon" /><img
-                      src="../images/my_work/resume/vs_code.png"
+                      src="../../assets/images/my_work/resume/vs_code.png"
                       alt="Github Icon"
                   /></span>
                 </li>
@@ -715,7 +701,7 @@
                   <span>Image Manipulation</span><span>GIMP</span
                   ><span class="resume_section_list_item_icons">
                     <img
-                      src="../images/my_work/resume/gimp.png"
+                      src="../../assets/images/my_work/resume/gimp.png"
                       alt="GIMP Icon"
                     />
                   </span>
@@ -751,8 +737,8 @@
                   </li>
                   <ul>
                     <li>
-                      <img src="../images/my_work/resume/stacked-files.svg"
-                      class="stack" / ><span>HTML, CSS, & JavaScript.</span>
+                      <img src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack" /><span>HTML, CSS, & JavaScript.</span>
                     </li>
                   </ul>
                   <li class="resume_section_list_item">
@@ -766,7 +752,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Express.js, Socket.io, & Heroku.</span>
                     </li>
@@ -783,7 +769,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >Python <span class="resume_deemphasize">(Twint)</span>,
@@ -800,7 +786,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >Twitter API &
@@ -862,8 +848,9 @@
                     <span
                       >In my free time, I'm currently studying:
                       <div id="container--currently_studying_icons_and_text">
-                        <img src="../images/my_work/resume/mushrooms.svg" />
-                        <img src="../images/my_work/resume/mushrooms.svg" />.
+                        <img src={currentlyStudyingImage} />
+                        <img src={currentlyStudyingImage} />.
+                        <span class="text_bold">{currentlyStudyingSubject}</span>
                       </div>
                     </span>
                   </li>
@@ -893,7 +880,7 @@
                     </span>
                   </li>
                   <li class="resume_section_list">
-                    <span id="latest_discovery"> </span>
+                    <span id="latest_discovery">Latest discovery: <a href={latestDiscoveryLink} target="_blank">{latestDiscovery}</a>.</span>
                   </li>
                 </ul>
               </div>
@@ -925,7 +912,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span> Sass & Parcel.</span>
                     </li>
@@ -941,7 +928,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>
                         HTML, CSS, JavaScript, jQuery, Git, & Github.</span
@@ -949,7 +936,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >CSS-only implementations of an
@@ -965,7 +952,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >CSS-only implementation of a
@@ -985,7 +972,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>GIMP.</span>
                     </li>
@@ -999,7 +986,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >WordPress & WordPress plugins
@@ -1038,7 +1025,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>HTML & CSS.</span>
                     </li>
@@ -1053,7 +1040,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Google Drive.</span>
                     </li>
@@ -1068,7 +1055,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>MailChimp & Calendly.</span>
                     </li>
@@ -1082,7 +1069,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Canva & GIMP.</span>
                     </li>
@@ -1093,7 +1080,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span
                         >WordPress Plugins
@@ -1136,7 +1123,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Gmail, Sortd, Boomerang, Trello, & Buffer.</span>
                     </li>
@@ -1152,7 +1139,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Google Sheets & Proprietary Databases.</span>
                     </li>
@@ -1185,7 +1172,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>Unbounce.</span>
                     </li>
@@ -1212,7 +1199,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >Received top marks for quality of instruction,
@@ -1243,13 +1230,13 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span> Microsoft Excel. </span>
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         >Collaborated with firm’s financial adviser to create a
@@ -1284,7 +1271,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         ><span class="text_emphasis"
@@ -1299,7 +1286,7 @@
                     </li>
                     <li>
                       <img
-                        src="../images/my_work/resume/promotion.svg"
+                        src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
                         ><span class="text_emphasis"
@@ -1323,7 +1310,7 @@
                   <ul>
                     <li>
                       <img
-                        src="../images/my_work/resume/stacked-files.svg"
+                        src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
                       /><span>
                         Bloomberg, CRSP, Compustat, & Microsoft Excel.
@@ -1356,130 +1343,7 @@
         </div>
       </div>
     </main>
-    <footer class="flexbox_basic--column">
-      <div class="show_mobile" id="mobile_version_alert">
-        <i class="fas fa-mobile-alt"></i>
-        <p>
-          You're currently viewing the mobile version of larrymg.me. That's
-          totally fine! Just keep in mind certain site features can only be seen
-          on larger screens.
-        </p>
-      </div>
-      <nav aria-role="footer_navigation" class="flexbox_basic--row">
-        <ul>
-          <h3>Site Navigation</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li>
-              <a href="https://wiki.larrymg.me" target="_blank">Site Wiki</a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="/my_work">My Work</a></li>
-            <li><a href="/what_i_use">What I Use</a></li>
-            <li>
-              <a href="/my_web_dev_journey" target="_blank"
-                >My Web Dev Journey</a
-              >
-            </li>
-            <li>
-              <a href="/web_dev_learning_resources"
-                >Web Dev Learning Resources</a
-              >
-            </li>
-          </ul>
-          <ul>
-            <li><a href="/coding_rules">Coding Rules & Assumptions</a></li>
-            <li><a href="/personal_rules">Personal Rules & Assumptions</a></li>
-          </ul>
-          <ul>
-            <li><a href="/snippets">Snippets</a></li>
-            <li><a href="/css_lab">CSS Lab</a></li>
-            <li><a href="/js_lab">JavaScript Lab</a></li>
-          </ul>
-          <ul>
-            <li><a href="/polymathy">Polymathy</a></li>
-            <li><a href="/ing_system">ING System</a></li>
-            <li><a href="/commonplace_book">Commonplace Book</a></li>
-          </ul>
-          <ul>
-            <li>
-              <a href="/conspiracy_against_larry"
-                >The Conspiracy Against Larry</a
-              >
-            </li>
-          </ul>
-        </ul>
-      </nav>
-      <div id="site_performance">
-        <ul>
-          <h3>Site Performance</h3>
-          <ul>
-            <li>
-              <a href="">Site Map</a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/iamthelabhras/larrymg.me"
-                target="_blank"
-                >Github</a
-              >
-            </li>
-          </ul>
-          <ul id="footer__coded_with">
-            <h4>Coded With ❤️ Using:</h4>
-            <div class="flexbox_basic--row">
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                  target="_blank"
-                  >HTML</a
-                >
-              </li>
-              <li><a href="https://sass-lang.com/" target="_blank">Sass</a></li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                  target="_blank"
-                  >Vanilla JavaScript</a
-                >
-              </li>
-            </div>
-          </ul>
-          <ul id="footer__test_performance">
-            <li>
-              <a
-                href="https://pagespeed.web.dev/report?url=https%3A%2F%2Flarrymg.me%2Fhttps://larrymg.me"
-                target="_blank"
-              >
-                Pagespeed Insights
-              </a>
-            </li>
-            <li>
-              <a href="https://www.deadlinkchecker.com/" target="_blank">
-                Deadlink Checker
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li class="pending_hyperlink">Report A Bug</li>
-            <li class="pending_hyperlink">Suggest A Feature</li>
-          </ul>
-        </ul>
-      </div>
-      <span id="footer__site_copyleft"
-        ><a href="https://www.gnu.org/licenses/copyleft.en.html" target="_blank"
-          >Copyleft</a
-        >
-        2022 | Labhrás Mac Gabhann |
-        <a href="mailto:hello@larrymg.me">hello@larrymg.me</a></span
-      >
-      <span
-        ><a href="https://www.youtube.com/watch?v=RJudJ9S579A" target="_blank"
-          >"One faithful harp shall praise thee."</a
-        ></span
-      >
-    </footer>
+    <Footer></Footer>
     <!-- #region Scripts -->
     <script
       src="https://kit.fontawesome.com/d2b0003921.js"
@@ -1487,15 +1351,8 @@
       async
       defer
     ></script>
-    <script type="module" src="../js/my_resume.js" async defer></script>
-    <script src="../js/loader.js"></script>
+    <!-- <script type="module" src="../js/my_resume.js" async defer></script> -->
+    <!-- <script src="../js/loader.js"></script> -->
     <!-- #endregion Scripts -->
   </body>
-  <!-- #region Loader -->
-  <div class="loader_container">
-    <div class="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  <!-- #endregion Loader -->
 </html>

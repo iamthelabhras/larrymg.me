@@ -1,152 +1,57 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-  <head>
+---
+
+// Style Imports
+import '../styles/main.scss';
+
+// Component Imports
+import StaticHead from "../components/StaticHead.astro";
+import Sidebar from "../components/Sidebar.astro";
+import ThisWeek from "../components/ThisWeek.astro";
+import LetsConnect from "../components/LetsConnect.astro";
+import Footer from "../components/Footer.astro";
+
+// Layout Imports
+import SidebarAndContent from "../layouts/SidebarAndContent.astro";
+
+// Framework Imports 
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+// CHANGING <HEADER> VARIABLES
+let pageURL = "https://www.larrymg.me/my_web_dev_journey.html";
+let title = "larrymg.me | My Web Dev Journey";
+let pageDescription = "I wasn't always a web developer. It took me a while to get here, and I learned a lot of valuable things along the way.";
+let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, personal websites, front-end web developer, front end web developer, web developer";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+
+<html lang="en">
+   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>larrymg.me | My Web Dev Journey</title>
-    <link rel="preload" href="../scss/main.scss" as="style" />
-    <link
-      rel="preload"
-      href="../fonts/helvetia-verbundene.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link rel="preload" href="../fonts/KulimPark-Regular.ttf"" as="font"
-    type="font/ttf" crossorigin>
-    <meta
-      name="description"
-      content="Wherein I describe the long & winding road to my work as a web developer."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../scss/main.scss" />
-    <!-- Load in Handwritten Font I'm (Currently) Using For 'Polaroid' Photos -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Favicon Settings -->
-    <!-- Generated using: https://realfavicongenerator.net -->
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="apple-touch-icon" sizes="60x60" href="../apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../favicon-16x16.png"
-    />
-    <link rel="manifest" href="../site.webmanifest" />
-    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5" />
-  </head>
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <StaticHead></StaticHead>
+  </head> 
   <body id="scoped_to_my_web_dev_journey">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <main class="sidebar_and_content">
-      <div class="larrymg_me--grid_container--sidebar_and_content">
-        <!-- #region Sidebar -->
-        <aside class="flexbox_basic--column larrymg_me--sidebar">
-          <!-- #region Side Bar -- This Week -->
-          <div class="this_week" id="what_im_learning">
-            <h2>
-              What I'm Learning
-              <span class="clean_break_on_wrap">This Week</span>:
-            </h2>
-            <ul id="what_im_learning_list"></ul>
-          </div>
-          <div class="this_week" id="what_im_reading">
-            <h2>
-              What I'm Reading
-              <span class="clean_break_on_wrap">This Week:</span>
-            </h2>
-            <ul id="what_im_reading_list"></ul>
-          </div>
-          <div class="this_week" id="what_im_watching">
-            <h2>
-              What I'm Watching
-              <span class="clean_break_on_wrap">This Week</span>:
-            </h2>
-            <ul id="what_im_watching_list"></ul>
-          </div>
-          <div class="this_week" id="this_weeks_hot_track">
-            <h2>
-              This Week's <span class="clean_break_on_wrap">Hot Track:</span>
-            </h2>
-            <div id="hot_track_container"></div>
-          </div>
-          <div class="this_week" id="this_weeks_hot_laugh">
-            <h2>
-              This Week's <span class="clean_break_on_wrap">Hot Laugh:</span>
-            </h2>
-            <div id="hot_laugh_container"></div>
-          </div>
-          <!-- #endregion Side Bar -- This Week -->
-          <!-- #region Let's Connect -->
-          <div class="lets_connect">
-            <h2>Let's Connect!</h2>
-            <div class="flexbox_basic--row lets_connect_links">
-              <a
-                href=""
-                target="_blank"
-                class="flexbox_basic--row"
-                data-lets_connect="twitter"
-                ><i
-                  class="fab fa-twitter-square"
-                  width="2.75rem"
-                  height="2.75rem"
-                ></i
-              ></a>
-              <a
-                href=""
-                target="_blank"
-                class="flexbox_basic--row"
-                data-lets_connect="linkedin"
-                ><i class="fab fa-linkedin" width="2.75rem" height="2.75rem"></i
-              ></a>
-              <a
-                href=""
-                target="_blank"
-                class="flexbox_basic--row"
-                data-lets_connect="spotify"
-                ><i class="fab fa-spotify" width="2.75rem" height="2.75rem"></i
-              ></a>
-              <a
-                href=""
-                target="_blank"
-                class="flexbox_basic--row"
-                data-lets_connect="letterboxd"
-                ><i class="fas fa-film" width="2.75rem" height="2.75rem"></i
-              ></a>
-              <a
-                href=""
-                class="flexbox_basic--row"
-                data-lets_connect="emailPersonal"
-                ><i
-                  class="fas fa-envelope-square"
-                  width="2.75rem"
-                  height="2.75rem"
-                ></i
-              ></a>
-            </div>
-          </div>
-          <!-- #endregion Let's Connect -->
-        </aside>
-        <!-- #endregion Side Bar -->
+    <SidebarAndContent>
+      <Sidebar>
+        <ThisWeek></ThisWeek> 
+        <LetsConnect></LetsConnect>
+      </Sidebar>
         <!-- #Region Content -->
         <div class="larrymg_me--content">
           <!-- #reg/ion Content -- Block Quotes -->
@@ -167,9 +72,9 @@
           <!-- #region Content -- Web Dev Journey Sticky Home & Header -->
           <div class="flexbox_basic--column" id="container--home_and_header">
             <h1 class="text_center">My Web Dev Journey</h1>
-            <a href="../index.html"
-              ><i class="fas fa-home" width="48px" height="42px"></i
-            ></a>
+            <a href="/"
+              ><img src="../../assets/images/icons/home.png" width="64px" height="64px" />
+            </a>
           </div>
           <!-- #region Video & Caption -->
           <div id="container--video_and_caption">
@@ -341,7 +246,7 @@
               </p>
               <figure class="journey_figure" id="">
                 <img
-                  src="../images/free_press_masthead.gif"
+                  src="../../assets/images/my_web_dev_journey/free_press_masthead.gif"
                   alt="Free Press (underground newspaper) masthead."
                   loading="lazy"
                 />
@@ -418,7 +323,7 @@
               </p>
               <figure class="journey_figure" id="">
                 <img
-                  src="../images/young_labhras_learns_to_compute.jpg"
+                  src="../../assets/images/my_web_dev_journey/young_labhras_learns_to_compute.jpg"
                   alt="A young Labhrás sitting in front of an old school keyboard in an old school computer lab."
                   loading="lazy"
                 />
@@ -751,7 +656,7 @@
               </p>
               <figure class="journey_figure">
                 <img
-                  src="../images/excel_job_search-6.png"
+                  src="../../assets/images/my_web_dev_journey/excel_job_search-6.png"
                   alt="A screencap of an Excel spreadsheet showing a small fraction of the 552 financial positions I applied for after graduating from business school."
                   loading="lazy"
                 />
@@ -776,7 +681,7 @@
               <a href="../pdfs/student_evals-1-cats.pdf" target="_blank"
                 >an accesible and personally relevent learning experience</a
               >, especially for
-              <a href="../images/student_evals-2-grma_note.png" target="_blank"
+              <a href="../../assets/images/my_web_dev_journey/student_evals-2-grma_note.png" target="_blank"
                 >non-Christian students</a
               >, but I'd worked hard in business school to build a stable &
               prosperous life for myself
@@ -870,15 +775,15 @@
 
               <figure class="journey_figure" id="">
                 <div class="code_block">
-                  <span>class HelloWorld {</span>
+                  <span>class HelloWorld</span>
                   <span class="one_tab"
-                    >public static void main(String[] args) {</span
+                    >public static void main(String[] args)</span
                   >
                   <span class="two_tab"
                     >System.out.println("Hello, World!");</span
                   >
-                  <span class="one_tab">}</span>
-                  <span>}</span>
+                  <span class="one_tab"></span>
+                  <span></span>
                 </div>
                 <figcaption>The Bit Of Java That (Re)Started It All</figcaption>
               </figure>
@@ -964,8 +869,8 @@
                 I was now consuming.
               </p>
               <figure class="journey_figure click_here_smaller_text">
-                <img src="../images/coding_notetaking_flowchart.svg" alt="A
-                flowchat outlined my "4-Ask" reading & note-taking system."
+                <img src="../../assets/images/my_web_dev_journey/coding_notetaking_flowchart.svg" alt="A
+                flowchat outlining my '4-Ask' reading & note-taking system."
                 loading="lazy"/>
                 <figcaption class="text_center">
                   <span>My "4-Ask" Reading & Note-Taking System</span>
@@ -1228,7 +1133,7 @@
                 >
                 built using (mostly) core HMTL & CSS functionality, learning a
                 ton about development while also building out
-                <a href="../images/cc_logo.png" target="_blank">my branding</a>
+                <a href="../../assets/images/my_web_dev_journey/cc_logo.png" target="_blank">my branding</a>
                 & web design skills along the way. Most recently, in December of
                 2020, I launched my first serious side-project,
                 <a href="https://marathon.christmas" target="_blank"
@@ -1250,23 +1155,23 @@
 
             <div class="journey_text">
               <figure class="journey_figure">
-                <img src="../images/wprbxmas_compliment-1.png" / alt="A
+                <img src="../../assets/images/my_web_dev_journey/wprbxmas_compliment-1.png" alt="A
                 screencap from the 2020 WPRBXmas listener chat showing listeners
-                complimenting my work on marathon.chrisrtmas" loading="lazy">
+                complimenting my work on marathon.chrisrtmas" loading="lazy" />
                 <figcaption class="text_center">
                   "This is what it sounds like ... when devs cry."
                 </figcaption>
               </figure>
               <figure class="journey_figure click_here_smaller_text">
                 <img
-                  src="../images/wprbxmas_traffic-1.png"
+                  src="../../assets/images/my_web_dev_journey/wprbxmas_traffic-1.png"
                   alt="A screen cap showing marathon.christmas' site traffic on 12/25/20."
                   loading="lazy"
                 />
                 <figcaption class="text_center">
                   <span>#WPRBXmas Server Traffic!</span
                   ><span
-                    ><a href="../images/wprbxmas_traffic-1.png" target="_blank"
+                    ><a href="../../assets/images/my_web_dev_journey/wprbxmas_traffic-1.png" target="_blank"
                       >Click here to view a full-screen image of this screencap
                       in a separate window.</a
                     ></span
@@ -1285,7 +1190,7 @@
 
               <li>
                 <i class="fas fa-file-alt"></i
-                ><a href="../images/cc_logo.png"
+                ><a href="../../assets/images/my_web_dev_journey/cc_logo.png"
                   >Compatible Connections' Redesigned Logo</a
                 >
               </li>
@@ -1479,132 +1384,9 @@
           <!-- <div> below closes larrymg_me--content. -->
         </div>
         <!-- #endregion Content -->
-      </div>
+      </SidebarAndContent>
     </main>
-    <footer class="flexbox_basic--column">
-      <div class="show_mobile" id="mobile_version_alert">
-        <i class="fas fa-mobile-alt"></i>
-        <p>
-          You're currently viewing the mobile version of larrymg.me. That's
-          totally fine! Just keep in mind certain site features can only be seen
-          on larger screens.
-        </p>
-      </div>
-      <nav aria-role="footer_navigation" class="flexbox_basic--row">
-        <ul>
-          <h3>Site Navigation</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li>
-              <a href="https://wiki.larrymg.me" target="_blank">Site Wiki</a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="/my_work">My Work</a></li>
-            <li><a href="/what_i_use">What I Use</a></li>
-            <li>
-              <a href="/my_web_dev_journey" target="_blank"
-                >My Web Dev Journey</a
-              >
-            </li>
-            <li>
-              <a href="/web_dev_learning_resources"
-                >Web Dev Learning Resources</a
-              >
-            </li>
-          </ul>
-          <ul>
-            <li><a href="/coding_rules">Coding Rules & Assumptions</a></li>
-            <li><a href="/personal_rules">Personal Rules & Assumptions</a></li>
-          </ul>
-          <ul>
-            <li><a href="/snippets">Snippets</a></li>
-            <li><a href="/css_lab">CSS Lab</a></li>
-            <li><a href="/js_lab">JavaScript Lab</a></li>
-          </ul>
-          <ul>
-            <li><a href="/polymathy">Polymathy</a></li>
-            <li><a href="/ing_system">ING System</a></li>
-            <li><a href="/commonplace_book">Commonplace Book</a></li>
-          </ul>
-          <ul>
-            <li>
-              <a href="/conspiracy_against_larry"
-                >The Conspiracy Against Larry</a
-              >
-            </li>
-          </ul>
-        </ul>
-      </nav>
-      <div id="site_performance">
-        <ul>
-          <h3>Site Performance</h3>
-          <ul>
-            <li>
-              <a href="">Site Map</a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/iamthelabhras/larrymg.me"
-                target="_blank"
-                >Github</a
-              >
-            </li>
-          </ul>
-          <ul id="footer__coded_with">
-            <h4>Coded With ❤️ Using:</h4>
-            <div class="flexbox_basic--row">
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                  target="_blank"
-                  >HTML</a
-                >
-              </li>
-              <li><a href="https://sass-lang.com/" target="_blank">Sass</a></li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                  target="_blank"
-                  >Vanilla JavaScript</a
-                >
-              </li>
-            </div>
-          </ul>
-          <ul id="footer__test_performance">
-            <li>
-              <a
-                href="https://pagespeed.web.dev/report?url=https%3A%2F%2Flarrymg.me%2Fhttps://larrymg.me"
-                target="_blank"
-              >
-                Pagespeed Insights
-              </a>
-            </li>
-            <li>
-              <a href="https://www.deadlinkchecker.com/" target="_blank">
-                Deadlink Checker
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li class="pending_hyperlink">Report A Bug</li>
-            <li class="pending_hyperlink">Suggest A Feature</li>
-          </ul>
-        </ul>
-      </div>
-      <span id="footer__site_copyleft"
-        ><a href="https://www.gnu.org/licenses/copyleft.en.html" target="_blank"
-          >Copyleft</a
-        >
-        2022 | Labhrás Mac Gabhann |
-        <a href="mailto:hello@larrymg.me">hello@larrymg.me</a></span
-      >
-      <span
-        ><a href="https://www.youtube.com/watch?v=RJudJ9S579A" target="_blank"
-          >"One faithful harp shall praise thee."</a
-        ></span
-      >
-    </footer>
+    <Footer></Footer>
     <!-- #region Scripts -->
     <script
       src="https://kit.fontawesome.com/d2b0003921.js"
@@ -1612,15 +1394,8 @@
       async
       defer
     ></script>
-    <script type="module" src="../js/my_web_dev_journey.js"></script>
-    <script src="../js/loader.js"></script>
+    <!-- <script type="module" src="../js/my_web_dev_journey.js"></script> -->
+    <!-- <script src="../js/loader.js"></script> -->
     <!-- #endregion Scripts -->
   </body>
-  <!-- #region Loader -->
-  <div class="loader_container">
-    <div class="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
-  <!-- #endregion Loader -->
 </html>

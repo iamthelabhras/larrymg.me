@@ -1,0 +1,265 @@
+---
+
+// Style Imports
+import '../styles/main.scss';
+
+// Component Imports
+import StaticHead from "../components/StaticHead.astro";
+import Footer from "../components/Footer.astro";
+
+// Framework Imports 
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+
+// CHANGING <HEADER> VARIABLES
+let pageURL = "https://www.larrymg.me/commonplace_book.html";
+let title = "larrymg.me | Commonplace Book";
+let pageDescription = "A collection of quotes, anecdotes, observations, information, & other errata I've gleaned from books, conversations, movies, song lyrics, social posts, podcasts, life experiences, & everything else.";
+let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, personal websites, front-end web developer, front end web developer, web developer";
+
+
+// Commonplace Book Data
+
+
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+---
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="{pageDescription}" />
+    <meta name="keywords" content={pageKeywords} />
+    <!-- Facebook Open Graph -->
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDescription} />
+    <StaticHead></StaticHead>
+  </head>
+  <body id="scoped_to_commonplace_book">
+    <main id="commonplace_book">
+      <article id="commonplace_book_entries">
+        <div class="card_count">
+          <h2 class="text_center" id="total--commonplace_book_entries"></h2>
+          <a href="/"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="card_container" id="container_commonplace_book_entries">
+          <!-- div below closes container_coding_rules-->
+        </div>
+      </article>
+    </main>
+    <Footer></Footer>
+    <!-- #region Scripts -->
+    <script
+      src="https://kit.fontawesome.com/d2b0003921.js"
+      crossorigin="anonymous"
+      async
+      defer
+    ></script>
+  <script>
+  //  Declare functions.
+
+  function generateCardStack(arrayOfCards, cardContainerSelector) {
+  // Initialize a variable to collect the HTML for our entire card stack. 
+  let html ="";
+  let cardStackHTML = "";
+
+  // Loop through each card object in our array and generate its HTML.
+  arrayOfCards.forEach((card, index) => {
+    // Increment each array item's index by one so rules start at #1.
+    card.card_number = index+1;
+    // Generate the HTML for each card in the stack. 
+    cardStackHTML+=   
+      `<div class="card" id="${card.card_number}">` + 
+      `<span class="card_number">#${card.card_number}</span>` +
+      `<p class="card_text">${card.body}</p>`;
+    // If card links to Twitter, grab link & insert into card. 
+
+    // NOTE:  Linked icon is added via a separate call to generateCardStickIcons() to ensure Parcel can 'see' it at build time.  See: https://parceljs.org/languages/javascript/#url-dependencies for more details.
+
+      if ('social_link' in card) {
+        cardStackHTML+= 
+          `<span class="card_image">`  + 
+          `<a href="${card.social_link}" class="card_icon" target="_blank">` +
+          `</a>` +
+          `</span>`;
+      };
+
+    cardStackHTML+=
+      `<span class="card_attribution">`;
+    
+    // If card links to source, insert a linked span element.
+      if ('source_link' in card)  {
+        cardStackHTML+= 
+          `<span class="card_source">` + 
+           `<a href="${card.source_link}" target="_blank">Source:</a>` +
+           `</span>`;
+      }
+    // Otherwise just insert an unlinked span.
+      else {
+        cardStackHTML+= 
+          `<span class="source">Source:</span>`;
+      }
+              
+   cardStackHTML+=
+    ` ${card.source}</span>`;
+  
+ 
+    // If card has justifications , insert them as list items.
+
+    // Note that we are looping within an array within the object we are currently looping over here!
+
+      if (card.justifications !== undefined ) {
+        cardStackHTML+=
+          `<div class="card_justifications">` +
+          `<span class="cursive">Justifications:</span>` + 
+          `<ul>`;
+        card.justifications.forEach (justification => {
+          cardStackHTML+=
+            `<li>${justification}</li>`;
+        });
+        cardStackHTML += 
+          `</ul>` +
+          `</div>`;
+      }
+  
+    // If card has concrete applications, instert them as list items.
+
+    // Note that we are looping within an array within the object we are currently looping over here!
+ 
+      if (card.concrete_applications !== undefined ) {
+        cardStackHTML+=  
+          `<div class="card_concrete_applications">` +
+          `<span class="cursive">Concrete Applications:</span>` +
+          `<ul>`;
+        card.concrete_applications.forEach (application => {
+          cardStackHTML+=
+            `<li>${application}</li>`;
+          });
+       cardStackHTML+=   
+          `</ul>` + 
+          `</div>`;
+        }    
+      
+      if (card.author !== undefined ) {
+          cardStackHTML+=  
+            `<div class="card_commonplace_author">`;
+            if (card.author_link !== undefined) {
+              cardStackHTML +=
+              `<span class="commonplace_author">` +
+              `<a href="${card.author_link}" target="_blank">` +
+              `${card.author}` +
+              `</a>` + 
+              `</span>`;
+            }
+            else {
+              cardStackHTML +=
+              `<span class="commonplace_author">` +
+              `${card.author}` +
+              `</span>`;
+            }
+            if (card.source_date !== undefined) {
+              cardStackHTML+= 
+                `<span class="commonplace_year">` + 
+                ` (${card.source_date})` +
+                `</span>`;
+            } 
+            cardStackHTML+=
+              `</div>`;
+         }  
+    
+    // Add the final HTML to each card in our looped array.   
+
+    cardStackHTML+=   
+      `</div>`;
+  
+  });
+
+    // Collect each stacked card's HTML in a single variable for insertion into the DOM. 
+
+  html+= cardStackHTML;
+  console.log(html);
+  cardContainerSelector.innerHTML = `${html}</div>`;
+};
+
+ // Grab all Commonplace Book entries & insert into HTML.
+const allCommonplaceBookEntries = [
+  { 
+    author: 'Nate Silver',
+    author_link: 'https://twitter.com/NateSilver538',
+    body: 'It probably doesn\'t end well, but it isn\'t clear yet in which way it ends poorly.',
+    platform: 'Social Media',
+    source: 'Twitter',
+    source_date: '2020',
+    source_link: 'https://twitter.com/NateSilver538/status/1313294739731623936?s=20&t=bqjR5ZrMiR5P5adiECLlLw'
+  },
+  {
+    author: 'Vladimir Nabakov',
+    author_link: 'https://en.wikipedia.org/wiki/Vladimir_Nabokov',
+    body: 'Life is a great surprise. I do not see why death should not be an even greater one.',
+    platform: 'Novel',
+    source: '<i>Pale Fire</i>',
+    source_date: '1962',
+    source_link: 'https://libgen.is/book/index.php?md5=BB96357BCDB1ED90860C4D93C2834B9A' 
+  },
+  {
+    author: 'Donald Hall',
+    author_link: 'https://en.wikipedia.org/wiki/Donald_Hall',
+    body: 'Now and then, especially at night, solitude loses its soft power and loneliness takes over. I am grateful when solitude returns.',
+    platform: 'Essay',
+    source: '"Between Solitude and Loneliness"',
+    source_date: '2016',
+    source_link: 'https://www.newyorker.com/culture/culture-desk/double-solitude',
+  },
+  {
+    author: 'Paul Schrader',
+    author_link: 'https://en.wikipedia.org/wiki/Paul_Schrader',
+    body: 'My father often talked of things being revealed - that was true invention, he said.  Revealing something\'s use, and magnifying it; discovering its imperfections, improving it, and putting it to work for you.  God had left the world incomplete, he said, and it was man\'s job to understand how it worked, tinker with it, and to finish it.  I think that was why he hated missionaries so much - because they taught people to put up with their earthly burdens.  For father, there were no burdens that couldn\'t be fitted with a set of wheels, or rudders, or a system of pulleys.',
+    platform: 'Film',
+    source: '<i>Mosquito Coast</i>',
+    source_date: '1986',
+    source_link : 'https://www.imdb.com/title/tt0091557/',
+  },
+  {
+    author: 'C.L.R. James',
+    author_link: 'https://en.wikipedia.org/wiki/C._L._R._James',
+    body: 'Great men make history but only such history as it is possible for them to make. Their freedom of achievement is limited by the necessities of their environment. To portray the limits of those necessities and the realisation, complete or partial, of all possibilities, that is the true business of the historian.',
+    platform: 'Essay',
+    source: '<i>The Black Jacobins</i>',
+    source_date: '1938',
+    source_link: 'https://libgen.is/book/index.php?md5=E4AFE8BB5BC88E50516CF0C01290342C'
+
+  },
+  
+  {
+    author: 'Jessa Crispin',
+    author_link: 'https://en.wikipedia.org/wiki/Jessa_Crispin',
+    body: 'I understand that this was my female relatives\' choice. Yet I also know how infrequently you truly make the choice to sacrifice something you love; it\'s more like a slow erosion. You give up one small thing, which makes it easier then to give up another, then another. After all, the men didn\'t ask them to make these sacrifices — asking that would require their acknowledgment there was something of value to give up.',
+    platform: 'Essay',
+    source: '"St. Teresa and the Single Ladies"',
+    source_date: '2016',
+    source_link: 'https://www.nytimes.com/2016/01/10/opinion/sunday/st-teresa-and-the-single-ladies.html' 
+  },
+
+]
+let totalCommonplaceBookEntries = document.querySelector("#total--commonplace_book_entries");
+totalCommonplaceBookEntries.innerHTML = `Commonplace Book (${allCommonplaceBookEntries.length})`;
+
+// Use generateCardStack function to dynamically generate HTML for Coding Rules & Coding Assumptions card stacks.
+
+generateCardStack(allCommonplaceBookEntries, container_commonplace_book_entries);
+generateCardStackIcons(); 
+  </script>
+  </body>
+  <!-- #endregion Scripts -->
+</html>

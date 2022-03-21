@@ -1,0 +1,103 @@
+---
+// Learning This Week
+let subjectName = "Vue.js";
+
+// Reading This Week
+let readingTitle = "Vue.js In Action";
+let readingAuthor = "Erik Hanchett";
+let readingAuthorLink = "https://twitter.com/erikch";
+
+// Watching This Week
+let videoTitle = "The Guard";
+let videoTrailer = "https://larrymg.me/video/watching_this_week.mp4";
+let videoYear = "2011";
+let videoDirector = "McDonagh";
+let videoDirectorLink = "https://en.wikipedia.org/wiki/John_Michael_McDonagh";
+
+// This Week's Hot Track
+let trackTitle = "The Lobster";
+let trackTitleLink =  "https://www.youtube.com/watch?v=_Scs_z-SIfA";
+let trackArtist = "The Gloaming";
+let trackArtistLink = "https://en.wikipedia.org/wiki/The_Gloaming";
+let trackVideoLink = "https://larrymg.me/video/hot_track.mp4";
+let trackYear = "2019";
+
+// This Week's Hot Laugh
+let laughTitle = "The Greatest Story Every Told";
+let laughTitleLink = "https://www.youtube.com/watch?v=3ZUinZz_Q2Q";
+let laughArtist = "Peter O'Toole";
+let laughArtistLink = "https://en.wikipedia.org/wiki/Peter_O%27Toole";
+let laughVideoLink = "https://larrymg.me/video/hot_laugh.mp4";
+let laughYear = "2010?";
+---
+
+   <!-- #region Side Bar -- This Week -->
+   <div class="this_week" id="what_im_learning">
+     <h2>
+       What I'm Learning
+       <span class="clean_break_on_wrap">This Week</span>:
+     </h2>
+     <ul id="what_im_learning_list">
+      <li>{subjectName}</li> 
+     </ul>
+   </div>
+   <div class="this_week" id="what_im_reading">
+     <h2>
+       What I'm Reading
+       <span class="clean_break_on_wrap">This Week:</span>
+     </h2>
+     <ul id="what_im_reading_list">
+      <li>{readingTitle}      <span class="author"><a href={readingAuthorLink} target="_blank">{readingAuthor}</a></span> 
+      </li> 
+     </ul>
+   </div>
+   <div class="this_week" id="what_im_watching">
+     <h2>
+       What I'm Watching
+       <span class="clean_break_on_wrap">This Week</span>:
+     </h2>
+     <ul id="what_im_watching_list">
+       <li>
+        <video controls=""><source src={videoTrailer} type="video/mp4">Sorry, your browser doesn't support embedded videos.</video> 
+        {videoTitle}<span class="clean_break_on_wrap">({videoYear}, dir. <a href={videoDirectorLink} target="_blank">{videoDirector}</a>)</span>
+       </li>
+     </ul>
+   </div>
+   <div class="this_week" id="this_weeks_hot_track">
+     <h2>
+       This Week's <span class="clean_break_on_wrap">Hot Track:</span>
+     </h2>
+     <div id="hot_track_container">
+      <ul>
+      <li>
+      <video id="TrackVideoLink" controls="">
+        <source src={trackVideoLink} type="video/mp4">
+        Sorry your browser doesn't support embedded videos.
+      </video>
+      <a href={trackTitleLink} target="_blank">{trackTitle}</a>
+      <span class="clean_break_on_wrap">({trackYear}, <a href={trackArtistLink} target="_blank">{trackArtist}</a>)</span>
+      </li> 
+      </ul> 
+     
+     </div>
+   </div>
+   <div class="this_week" id="this_weeks_hot_laugh">
+     <h2>
+       This Week's <span class="clean_break_on_wrap">Hot Laugh:</span>
+     </h2>
+     <div id="hot_laugh_container">
+      <ul>
+        <li>
+        <video id="laughVideoLink" controls="">
+          <source src={laughVideoLink} type="video/mp4">
+          Sorry Your browser doesn't support embedded videos.
+        </video>
+        <a href={laughTitleLink} target="_blank">
+         {laughTitle} 
+        </a>
+        <span class="clean_break_on_wrap">({laughYear}, <a href={laughArtistLink} target="_blank">{laughArtist}</a>)</span>
+        </li>
+      </ul> 
+     </div>
+   </div>
+   <!-- #endregion Side Bar -- This Week -->

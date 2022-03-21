@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: "main_text";
-  src: url("../fonts/KulimPark-Regular.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-Regular.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "main_text";
   font-style: italic;
-  src: url("../fonts/KulimPark-Italic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-Italic.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "main_text";
   font-weight: 200;
-  src: url("../fonts/KulimPark-ExtraLight.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-ExtraLight.ttf") format("truetype");
   font-display: block;
 }
 
@@ -26,22 +26,15 @@
   font-family: "main_text";
   font-weight: 200;
   font-style: italic;
-  src: url("../fonts/KulimPark-ExtraLightItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-ExtraLightItalic.ttf")
+    format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "main_text";
   font-weight: 300;
-  src: url("../fonts/KulimPark-Light.ttf") format("truetype");
-  font-display: block;
-}
-
-@font-face {
-  font-family: "main_text";
-  font-weight: 300;
-  font-style: italic;
-  src: url("../fonts/KulimPark-LightItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-Light.ttf") format("truetype");
   font-display: block;
 }
 
@@ -49,14 +42,22 @@
   font-family: "main_text";
   font-weight: 300;
   font-style: italic;
-  src: url("../fonts/KulimPark-LightItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-LightItalic.ttf") format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "main_text";
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../../assets/fonts/KulimPark-LightItalic.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "main_text";
   font-weight: 600;
-  src: url("../fonts/KulimPark-SemiBold.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-SemiBold.ttf") format("truetype");
   font-display: block;
 }
 
@@ -64,14 +65,15 @@
   font-family: "main_text";
   font-weight: 600;
   font-style: italic;
-  src: url("../fonts/KulimPark-SemiBoldItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-SemiBoldItalic.ttf")
+    format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "main_text";
   font-weight: 700;
-  src: url("../fonts/KulimPark-Bold.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-Bold.ttf") format("truetype");
   font-display: block;
 }
 
@@ -79,7 +81,8 @@
   font-family: "main_text";
   font-weight: 700;
   font-style: italic;
-  src: url("../fonts/KulimPark-SemiBoldItalic.ttf") format("truetype");
+  src: url("../../../assets/fonts/KulimPark-SemiBoldItalic.ttf")
+    format("truetype");
   font-display: block;
 }
 
@@ -92,7 +95,7 @@
 // @font-face {
 //   font-family: "cursive_flourish";
 //   font-style: normal;
-//   src: url("../fonts/helvetia-verbundene.ttf") format("truetype");
+//   src: url("../../../assets/fonts/helvetia-verbundene.ttf") format("truetype");
 //   font-display: swap;
 // }
 
@@ -100,7 +103,8 @@
   font-family: "cursive_flourish";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/learning_curve_regular_ot_tt.ttf") format("truetype");
+  src: url("../../../assets/fonts/learning_curve_regular_ot_tt.ttf")
+    format("truetype");
   font-display: block;
 }
 
@@ -108,7 +112,8 @@
   font-family: "cursive_flourish";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/learning_curve_bold_ot_tt.ttf") format("truetype");
+  src: url("../../../assets/fonts/learning_curve_bold_ot_tt.ttf")
+    format("truetype");
   font-display: block;
 }
 
@@ -119,7 +124,7 @@
 @font-face {
   font-family: "resume_monospace";
   font-style: normal;
-  src: url("../fonts/MonofurForPowerLine.ttf") format("truetype");
+  src: url("../../../assets/fonts/MonofurForPowerLine.ttf") format("truetype");
   font-display: block;
 }
 
@@ -130,7 +135,7 @@
 
 @font-face {
   font-family: "resume_main_text";
-  src: url("../fonts/GothicA1-Regular-400.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-Regular-400.ttf") format("truetype");
   font-display: block;
 }
 
@@ -139,35 +144,36 @@
 
 @font-face {
   font-family: "resume_main_text";
-  src: url("../fonts/GothicA1-Regular-400.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-Regular-400.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "resume_main_text";
   font-weight: 200;
-  src: url("../fonts/GothicA1-ExtraLight-200.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-ExtraLight-200.ttf")
+    format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "resume_main_text";
   font-weight: 300;
-  src: url("../fonts/GothicA1-Light-300.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-Light-300.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "resume_main_text";
   font-weight: 500;
-  src: url("../fonts/GothicA1-Medium-500.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-Medium-500.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "resume_main_text";
   font-weight: 700;
-  src: url("../fonts/GothicA1-Bold-700.ttf") format("truetype");
+  src: url("../../../assets/fonts/GothicA1-Bold-700.ttf") format("truetype");
   font-display: block;
 }
 
@@ -177,17 +183,29 @@
 
 @font-face {
   font-family: "Xmas Sweater";
-  src: url("../fonts/xmassweaterstitch-xxyq-webfont.woff2") format("woff2"),
-    url("../fonts/xmassweaterstitch-xxyq-webfont.woff") format("woff");
+  src: url("../../../assets/fonts/xmassweaterstitch-xxyq-webfont.woff2")
+      format("woff2"),
+    url("../../../assets/fonts/xmassweaterstitch-xxyq-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Rubik";
-  src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+  src: url("../../../assets/fonts/Rubik-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /* #endregion Self-hosted Fonts - SNIPPETS - Sounds of Marathon Christmas */
+
+// My Web Dev Journey 'Polaroid Caption' Font
+
+@font-face {
+  font-family: "Kalam";
+  src: url("../../../assets/fonts/Kalam-Light.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
