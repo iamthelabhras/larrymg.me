@@ -18,3 +18,10 @@ yarn-error.log*
 
 # custom folders
 /dev_notes
+
+# folders containining assets & large media files
+/public/assets/audio
+/public/assets/fonts
+/public/assets/images
+/public/assets/pdfs
+/public/assets/video
