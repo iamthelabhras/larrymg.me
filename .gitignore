@@ -17,11 +17,11 @@ yarn-error.log*
 .DS_Store
 
 # custom folders
-/dev_notes
+dev_notes/
 
 # folders containining assets & large media files
-/public/assets/audio
-/public/assets/fonts
-/public/assets/images
-/public/assets/pdfs
-/public/assets/video
+public/assets/audio/
+public/assets/fonts/
+public/assets/images/
+public/assets/pdfs/
+public/assets/video/
