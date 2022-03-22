@@ -75,9 +75,7 @@ let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann,
       async
       defer
     ></script>
-        <script type="module">
-
-// Script type must be set to module because generateStackIcons() relies on import.meta object's url method!
+        <script>
 
 // Personal Rules
 
@@ -1047,7 +1045,7 @@ function generateCardStackIcons() {
   //  Loop over all cards in the DOM that need icons & add icons.
   cardsWithIcons.forEach(card  => {
   const icon  = document.createElement('img');
-  icon.src = new URL('assets/images/icons/icons8-twitter-blue.png', import.meta.url);
+  icon.src = "https://larrymg.me/assets/images/icons/icons8-twitter-blue.png";
   card.appendChild(icon);
   });
 };
