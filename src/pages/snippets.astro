@@ -270,6 +270,43 @@ let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann,
             ></audio>
           </div>
           <!-- #endregion Sounds of Marathon Christmas -->
+          <!-- #region Vim Task Log Timestamp -->
+                    <h2>
+            Task Log Timestamping
+          </h2>
+          
+                   <div class="snippet_description_container">
+            <div class="snippet_description_card">
+              <h3>Snippet Description</h3>
+              <p>
+              As part of my ING system, I keep a task log of (almost) everything I do on a day-to-day basis.
+              </p>
+              <p> 
+              An integral part of my task log is timestamping: every ING task is associated with a 24-hour (i.e. "military time") timestamp.
+              </p>
+            </div>
+            <div class="snippet_description_card">
+              <h3>Snippet Use Case</h3>
+              <p>
+              Timestamping task log entries is a deceptively "trivial" piece of data capture!</p>  
+              <p> 
+              To help keep things moving along, with a minimum of administrative overhead, I created a simple keybinding (<span class="code">&lt;leader&gt;ts&lt;/leader&gt;</span>) in <a href="https://neovim.io/" target="_blank">Neovim</a>'s <span class="code">init.vim</span> file that <span class="text_emphasis">automatically</span> creates a new 24-hour timestamp in the left margin of new task log entries.  Additionally, this key-binding also puts <a href="https://neovim.io/" target="_blank">Neovim</a> in insert mode and performs some standard formatting (2 tabs) whenever invoked. 
+              </p>
+              <p>
+              It may not seem like much, but the time-savings associated with this simple keybinding really do add up over time and help keep my focus where it needs to be: on capturing data that can't easily be automatically generated via code!
+             </p>
+            </div>
+          </div>
+          <div class="snippet_code_container" id="vim_task_log_timestamp">
+          <span class="text_emphasis">Relevant section of init.vim:</span>
+            <span class="code text_block">"" -desc: Add time-stamp margin to new Task Log Entry.</span>
+            <span class="code text_block">nnoremap &lt;leadertlts&gt; :put =strftime('* %H:%M ')&lt;CR&gt;$i&lt;TAB&gt;&lt;TAB&gt;</span>
+            <video controls>
+            <source src="/assets/video/vim_task_log_timestamp.mp4">
+                Sorry, your browser doesn't support embedded videos!
+            </video>
+          </div> 
+          <!-- #endregion Vim Task Log Timestamp -->
           <!-- #endregion Content -- Pseudo-Nav -->
           <p class="show_mobile show_mobile-encourage_larger_screen">
             <i class="fas fa-mobile-alt"></i>
