@@ -49,6 +49,16 @@ body#scoped_to_snippets {
     padding: 20px 0px;
     background: #efefef;
     // background-image: url("../../images/snippets/sounds_of_marathon_christmas/container_bg.png");
+    .code {
+      border: none;
+      background: none;
+      font-weight: 800;
+      color: black;
+    }
+    video {
+      width: 80%;
+      margin: 25px 0px;
+    }
   }
 
   div#sounds_of_marathon_christmas {
