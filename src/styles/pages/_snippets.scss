@@ -135,6 +135,17 @@ body#scoped_to_snippets {
       color: var(--santa_white);
     }
   }
+
+  div#vim_task_log_timestamp {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span:first-of-type {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 /* #region Media Queries */
