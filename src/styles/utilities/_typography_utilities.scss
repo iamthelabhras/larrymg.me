@@ -4,6 +4,7 @@
 }
 
 .code {
+  /* NOTE: This utility class is tweaked in Pages -- Snippets scope to improve legibility in Snippets code containers. */
   line-height: 1.55;
   border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 0px 15px;
@@ -38,4 +39,8 @@
 
 .text_emphasis {
   font-style: italic;
+}
+
+.text_block {
+  display: block;
 }
