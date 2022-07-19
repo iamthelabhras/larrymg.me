@@ -18,12 +18,14 @@ import Footer from "../components/Footer.astro";
 let pageURL = "https://www.larrymg.me/resume.html";
 let title = "Labhrás (Larry) Mac Gabhann's Resume";
 let pageDescription = "";
-let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, front-end web developer, front end web developer, web developer, resume, available for hire, Philadelphia, CSS, Sass, Parcel, JavaScript, Git, Github, GIMP, Vim, VS Code, Astro, Vue.js, Vue";
+let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, front-end web developer, front end web developer, web developer, resume, available for hire, Philadelphia, CSS, Sass, Vite, Parcel, JavaScript, Git, Github, GIMP, Vim, VS Code, Astro, Vue.js, Vue";
 
+// Last updated: 7/19/22.
 let currentlyStudyingImage = "../../assets/images/my_work/resume/mushrooms.svg";
 let currentlyStudyingSubject ="Mycology";
-let latestDiscovery="Lowest Lowest Girl";
-let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
+// Last updated: 7/19/22.
+let latestDiscovery="Ramsey Lewis";
+let latestDiscoveryLink ="https://www.youtube.com/watch?v=DU6v4eX3Q3U"
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -50,49 +52,49 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
     <main id="my_work--resume">
       <div class="flexbox_basic--row" id="container--home_and_header">
         <a href="/"
-          ><img src="../../assets/images/icons/home.png" width="64px" height="64px" />
+          ><img src="/assets/images/icons/home.png" width="64px" height="64px" />
         </a>
       </div>
       <div class="resume--container--header_and_columns">
         <header id="resume_header">
           <a
-            href="https://labhras.link/213"
+            href="/assets/pdfs/resume-mac_gabhann.pdf"
             target="_blank"
             id="download_pdf_link"
-            ><img src="../../assets/images/my_work/resume/pdf.svg" id="download_pdf"
+            ><img src="/assets/images/my_work/resume/pdf.svg" id="download_pdf"
           /></a>
           <h1 class="text_center">
-            <a href="https://labhras.link/a8w" target="_blank">Labhras</a>
+            <a href="https://forvo.com/word/labhr%C3%A1s/#ga" target="_blank">Labhras</a>
             (Larry)
             <span class="clean_break_on_wrap"
-              ><a href="https://labhras.link/yu4" target="_blank"
+              ><a href="https://forvo.com/word/mac_gabhann/#ga" target="_blank"
                 >Mac Gabhann</a
               ></span
             >
           </h1>
           <div class="header_contact_info">
             <div>
-              <a href="https://labhras.link/1g8" target="_blank">
-                <img src="../../assets/images/my_work/resume/twitter.svg" />
+              <a href="https://twitter.com/iamthelabhras" target="_blank">
+                <img src="/assets/images/my_work/resume/twitter.svg" />
                 <span>@iamthelabhras</span>
               </a>
             </div>
             <div>
               <a href="tel:267-225-1471">
-                <img src="../../assets/images/my_work/resume/phone.png" />
+                <img src="/assets/images/my_work/resume/phone.png" />
                 <span>(267) - 225 - 1471</span>
               </a>
             </div>
             <div>
               <a href="mailto:working@larrymg.me">
-                <img src="../../assets/images/my_work/resume/email.png" />
+                <img src="/assets/images/my_work/resume/email.png" />
                 <span>working@larrymg.me</span></a
               >
             </div>
             <div>
-              <a href="https://labhras.link/i6h" target="_blank">
-                <img src="../../assets/safari-pinned-tab.svg" />
-                <span>https://larrymg.me </span>
+              <a href="https://github.com/iamthelabhras" target="_blank">
+                <img src="../../assets/images/icons/iconmonstr-github.svg" />
+                <span>iamthelabhras</span>
               </a>
             </div>
           </div>
@@ -103,14 +105,14 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
             id="container--resume-col_2_wrapped"
           >
             <section class="resume_section" id="objective_wrapped">
-              <h2><span>O</span>OBJECTIVE</h2>
+              <h2>OBJECTIVE</h2>
               <p>
                 Seeking a team-based, junior front-end developer role focused on
                 delighting users, building useful things, & continuous learning.
               </p>
             </section>
             <section class="resume_section" id="experience">
-              <h2><span>E</span>EXPERIENCE</h2>
+              <h2>EXPERIENCE</h2>
               <div class="resume_section_with_bullets">
                 <div class="resume_flex_title_and_date_wraps">
                   <span class="job_title">FRONT-END WEB DEVELOPER</span>
@@ -119,100 +121,96 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">PRESENT</span></span
                   >
                 </div>
-                <span class="employer">COMPATIBLE CONNECTIONS</span>
+                <span class="employer"><a href="https://compatibleconnections.biz" target="_blank">COMPATIBLE CONNECTIONS</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
-                    <span
-                      >Optimized “2.0” site stylesheets, images, & other digital
-                      assets using a CSS preprocessor & web application
-                      bundler.</span
-                    >
+                    <span>
+                      <a href="https://github.com/iamthelabhras/compatibleconnections.biz">(v3.0)</a>
+                      Site-wide rewrite/refactor using <a href="https://astro.build/" target="_blank">Astro SSG</a> & <a href="https://www.patterns.dev/posts/islands-architecture/" target="_blank">islands architecture</a>.
+                    </span>
                   </li>
                   <ul>
                     <li>
                       <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
+                        src="/assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
-                      /><span> Sass & Parcel.</span>
-                    </li>
+                      />
+                      <span>
+                        <a href="https://astro.build" target="_blank">Astro</a>, HTML, CSS, Sass, JavaScript, Git, <a href="https://github.com/iamthelabhras" target="_blank">GitHub</a>, & Vite.
+                      </span>
+                    </li> 
+                    <li>
+                      <img
+                        src="/assets/images/my_work/resume/promotion.svg"
+                        class="megaphone"/>
+                      <span>
+                        Standardized <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/styles">site CSS & CSS variables</a> using custom style guide.
+                      </span> 
+                    </li> 
+                    <li>
+                      <img
+                        src="/assets/images/my_work/resume/promotion.svg"
+                        class="megaphone"/>
+                      <span>
+                        Converted unwieldy HTML into <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components"target="_blank">Astro components</a>.
+                      </span> 
+                    </li> 
+                    <li>
+                      <img
+                        src="/assets/images/my_work/resume/promotion.svg"
+                        class="megaphone"/>
+                      <span>
+                        Used <a href="" target="_blank">JavaScript objects & functions</a> to store & dynamically inject data into site HTML.
+                      </span> 
+                    </li> 
+                    <li>
+                      <img
+                        src="/assets/images/my_work/resume/promotion.svg"
+                        class="megaphone"/>
+                      <span>
+                        Drastically improved codebase's performance, maintainability, & legibility.
+                      </span> 
+                    </li> 
                   </ul>
                   <li class="resume_section_list_item">
-                    <span
-                      >Designed, developed, & maintained a
-                      <a href="https://labhras.link/kwm" target="_blank"
-                        >customized, fully responsive "2.0" website</a
-                      >.</span
-                    >
+                    <span>
+                      <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components">(v2.0)</a>
+                      Designed, developed, & maintained a responsive site using foundational web technologies.
+                    </span>
                   </li>
                   <ul>
                     <li>
                       <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
+                        src="/assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
-                      /><span>
-                        HTML, CSS, JavaScript, jQuery, Git, & Github.</span
-                      >
-                    </li>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >CSS-only implementations of an
-                        <a href="https://labhras.link/e1t" target="_blank"
-                          >image</a
-                        >
-                        /
-                        <a href="https://labhras.link/5e1feb" target="_blank"
-                          >card</a
-                        >
-                        gallery.
+                      />
+                      <span>
+                        HTML, CSS, Sass, JavaScript, Git, <a href="" target="_blank">GitHub</a>, & Parcel.
                       </span>
                     </li>
                     <li>
                       <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >CSS-only implementation of a
-                        <a href="https://labhras.link/0c528f" target="_blank"
-                          >left-to-right scrollable Grid "carousel"</a
-                        >
-                        with CSS artwork & animations.</span
-                      >
+                        src="/assets/images/my_work/resume/promotion.svg"
+                        class="megaphone"/>
+                      <span>
+                        CSS-only implementations of full-screen / thumbnail <a href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_inspirational_graphics.scss" target="_blank">image</a> & <a href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_dating_tips.scss" target="_blank">card</a> galleries.
+                      </span> 
                     </li>
                   </ul>
                   <li class="resume_section_list_item">
-                    <span
-                      >Created / manipulated all images on 2.0 website & aligned
-                      them with site’s brand identity.</span
-                    >
+                    <span>
+                      <span>(v1.0)</span>
+                      Reviewed, refactored, & optimized “legacy” identikit site.
+                    </span>
                   </li>
                   <ul>
                     <li>
                       <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>GIMP.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Re-designed & re-developed business' "legacy" identikit
-                      website.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span
-                        >WordPress & WordPress plugins
-                        <span class="resume_deemphasize"
-                          >(e.g. Elementor).</span
-                        ></span
-                      >
+                        src="/assets/images/my_work/resume/stacked-files.svg"
+                        class="stack" />
+                      <span>
+                        WordPress & WordPress plugins (e.g. Elementor).
+                      </span>
                     </li>
                   </ul>
                 </ul>
@@ -225,22 +223,31 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">PRESENT</span></span
                   >
                 </div>
-                <span class="employer"> COMPATIBLE CONNECTIONS</span>
+                <span class="employer"><a href="https://compatibleconnections.biz" target="_blank">COMPATIBLE CONNECTIONS</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
                     <span
-                      >Lead head-to-toe rebrand of business' logo, digital
+                      >Lead head-to-toe rebrand of logo, digital
                       assets, marketing materials, & client materials.</span
                     >
                   </li>
-
+                  <ul>
+                    <li>
+                      <img
+                        src="/assets/images/my_work/resume/stacked-files.svg"
+                        class="stack"
+                      />
+                      <span>
+                       Canva, <a href="https://en.eagle.cool/">Eagle</a>, & GIMP.
+                      </span>
+                    </li>
+                  </ul>
                   <li class="resume_section_list_item">
                     <span
                       >Designed custom e-mail templates for scheduling &
                       appointments.</span
                     >
                   </li>
-
                   <ul>
                     <li>
                       <img
@@ -249,11 +256,10 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                       /><span>HTML & CSS.</span>
                     </li>
                   </ul>
-
                   <li class="resume_section_list_item">
                     <span
                       >Created, maintained, & audited a “database” to store
-                      business’ critical data & digital assets.</span
+                      mission-critical data & digital assets.</span
                     >
                   </li>
                   <ul>
@@ -261,15 +267,13 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                       <img
                         src="../../assets/images/my_work/resume/stacked-files.svg"
                         class="stack"
-                      /><span>Google Drive.</span>
+                      /><span>CLI, Google Drive, & Linux (rsync).</span>
                     </li>
                   </ul>
                   <li class="resume_section_list_item">
                     <span
-                      >Utilized third-party marketing & scheduling platforms to
-                      streamline & improve existing processes & more tightly
-                      integrate them into business’ website.</span
-                    >
+                      >Utilized third-party marketing & scheduling tools to
+                      streamline mission-critical processes.</span>
                   </li>
                   <ul>
                     <li>
@@ -293,26 +297,6 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                       /><span>Canva & GIMP.</span>
                     </li>
                   </ul>
-                  <li class="resume_section_list_item">
-                    <span>Automated regular site & database backups.</span>
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span
-                        >WordPress Plugins
-                        <span class="resume_deemphasize"
-                          >(i.e. BackupGuard)</span
-                        >
-                        & iTerm2
-                        <span class="resume_deemphasize"
-                          >(i.e. cronjobs).</span
-                        ></span
-                      >
-                    </li>
-                  </ul>
                 </ul>
               </div>
               <div class="resume_section_with_bullets">
@@ -323,7 +307,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">DECEMBER 2017</span></span
                   >
                 </div>
-                <span class="employer">CITIZEN DIPLOMACY INTERNATIONAL</span>
+                <span class="employer"><a href="https://cdiphila.org/">CITIZEN DIPLOMACY INTERNATIONAL</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
                     <span
@@ -373,7 +357,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">FEBRUARY 2017</span></span
                   >
                 </div>
-                <span class="employer">COMPATIBLE CONNECTIONS</span>
+                <span class="employer"><a href="https://compatibleconnections.biz" target="_blank">COMPATIBLE CONNECTIONS</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
                     <span
@@ -438,11 +422,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">JUNE 2014</span></span
                   >
                 </div>
-                <span class="employer">ENVIROKURE</span>
+                <span class="employer"><a href="https://www.envirokure.com/company" target="_blank">ENVIROKURE</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
                     <span
-                      >Optimized & audited start-up firm’s financial
+                      >Optimized & audited start-up firm's financial
                       models.</span
                     >
                   </li>
@@ -458,9 +442,9 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                         src="../../assets/images/my_work/resume/promotion.svg"
                         class="megaphone"
                       /><span
-                        >Collaborated with firm’s financial adviser to create a
+                        >Collaborated with firm's financial team to create a
                         “seasonality matrix” that accurately modeled month-
-                        over-month changes in firm’s inventory, manufacturing
+                        over-month changes in inventory, manufacturing
                         costs, & projected sales.</span
                       >
                     </li>
@@ -475,12 +459,12 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                     <span class="clean_break_on_wrap">DECEMBER 2013</span></span
                   >
                 </div>
-                <span class="employer">VILLANOVA UNIVERSITY</span>
+                <span class="employer"><a href="https://www1.villanova.edu/university/business/academics/graduate-programs/mba/professional-mba/fellowship-program.html" target="_blank">VILLANOVA UNIVERSITY</a></span>
                 <ul class="resume_section_list">
                   <li class="resume_section_list_item">
                     <span
                       >Gathered qualitative & quantitative data in support of
-                      professors’ changing research agendas; analyzed data to
+                      professors' changing research agendas; analyzed data to
                       produce literature reviews, causal models, &
                       recommendations for future research; collaborated with
                       professors to produce scholarly articles & conference
@@ -497,7 +481,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                           >Information Systems Management</span
                         >
                         (30.4),
-                        <a href="https://labhras.link/5135be" target="_blank"
+                        <a href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2013.832965" target="_blank"
                           >“A Framework for E-Discovery of Social Media Content
                           Within the United States”</a
                         >.</span
@@ -512,7 +496,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                           >Information Systems Management</span
                         >
                         (29.4),
-                        <a href="https://labhras.link/0b598b" target="_blank"
+                        <a href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716995" target="_blank"
                           >“The E-Commerce Sales & Use Tax Controversy: Is The
                           End Near?”</a
                         >.</span
@@ -521,7 +505,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   </ul>
                   <li class="resume_section_list_item">
                     <span
-                      >Gathered firm financial performance data; imported &
+                      >Gathered firm financial data; imported &
                       modeled financial data; performed initial financial
                       analyses.</span
                     >
@@ -560,14 +544,14 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
           </div>
           <div class="container--resume-col_1">
             <section class="resume_section" id="objective_unwrapped">
-              <h2><span>O</span>OBJECTIVE</h2>
+              <h2>OBJECTIVE</h2>
               <p>
                 Seeking a team-based, junior front-end developer role focused on
                 delighting users, building useful things, & continuous learning.
               </p>
             </section>
             <section class="resume_section" id="education">
-              <h2><span>E</span>EDUCATION</h2>
+              <h2>EDUCATION</h2>
               <ul class="resume_section_list">
                 <li class="resume_section_list_item">
                   <span>MBA</span>
@@ -612,11 +596,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
               </ul>
             </section>
             <section class="resume_section" id="courses_and_certifications">
-              <h2><span>C</span>COURSES & CERTIFICATIONS</h2>
+              <h2>COURSES & CERTIFICATIONS</h2>
               <ul class="resume_section_list">
                 <li class="resume_section_list_item">
                   <span
-                    ><a href="https://labhras.link/9ed2ad" target="_blank"
+                    ><a href="https://css-for-js.dev/" target="_blank"
                       >CSS For JavaScript Developers</a
                     ></span
                   >
@@ -626,14 +610,14 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                 </li>
                 <li class="resume_section_list_item">
                   <span
-                    ><a href="https://labhras.link/pwt" target="_blank"
+                    ><a href="https://cssgrid.io/" target="_blank"
                       >CSS Grid</a
                     ></span
                   ><span>Wes Bos</span><span>2020</span>
                 </li>
                 <li class="resume_section_list_item">
                   <span
-                    ><a href="https://labhras.link/cux" target="blank"
+                    ><a href="https://wesbos.com/beginner-javascript" target="blank"
                       >Beginner JavaScript</a
                     ></span
                   ><span>Wes Bos</span>
@@ -641,7 +625,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                 </li>
                 <li class="resume_section_list_item">
                   <span
-                    ><a href="https://labhras.link/pns" target="_blank"
+                    ><a href="https://chandoo.org/wp/resources/50-ways-to-analyze-data/" target="_blank"
                       >50 Ways To Analyze Data</a
                     ></span
                   ><span>Chandoo.org</span>
@@ -650,11 +634,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
               </ul>
             </section>
             <section class="resume_section" id="skills">
-              <h2><span>S</span>SKILLS</h2>
+              <h2>SKILLS</h2>
               <ul class="resume_section_list">
                 <li class="resume_section_list_item">
                   <span>Web Dev</span
-                  ><span>HTML, CSS, Sass, JavaScript, Parcel</span
+                  ><span>HTML, CSS, Sass, JavaScript, & <a href="https://astro.build" target="_blank">Astro</a> </span
                   ><span class="resume_section_list_item_icons"
                     ><img
                       src="../../assets/images/my_work/resume/html.svg"
@@ -672,13 +656,13 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                       alt="Vanilla JavaScript Icon"
                     />
                     <img
-                      src="../../assets/images/my_work/resume/parcel.png"
-                      alt="Parcel Icon"
+                      src="../../assets/images/my_work/resume/astro.png"
+                      alt="Astro Icon"
                     />
                   </span>
                 </li>
                 <li class="resume_section_list_item">
-                  <span>Version Control</span><span>Git & Github</span
+                  <span>Version Control</span><span>Git & <a href="https://github.com/iamthelabhras" target="_blank">GitHub</a></span
                   ><span class="resume_section_list_item_icons">
                     <img
                       src="../../assets/images/my_work/resume/git.svg"
@@ -709,11 +693,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
               </ul>
             </section>
             <section class="resume_section" id="projects_and_side_hustles">
-              <h2><span>P</span>PROJECTS & SIDE HUSTLES</h2>
+              <h2>PROJECTS & SIDE HUSTLES</h2>
               <div class="resume_section_with_bullets">
                 <div class="resume_flex_title_and_date_wraps">
                   <span class="side_hustle"
-                    ><a href="https://labhras.link/4wo" target="_blank"
+                    ><a href="https://marathon.christmas" target="_blank"
                       >MARATHON CHRISTMAS</a
                     ></span
                   >
@@ -726,11 +710,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   <li class="resume_section_list_item">
                     <span
                       >Designed, developed, & mantained fan website for
-                      <a href="https://labhras.link/luw" target="_blank"
+                      <a href="https://keepingscoreathome.com/" target="_blank"
                         >WPRB DJ Jon Solomon's</a
                       >
                       annual
-                      <a href="https://labhras.link/a1e" target="_blank"
+                      <a href="https://communitynews.org/2020/12/01/jon-solomon-brings-wprb-music-marathon-home-for-the-holidays/" target="_blank"
                         >25-hour Christmas marathon</a
                       >.</span
                     >
@@ -743,10 +727,8 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   </ul>
                   <li class="resume_section_list_item">
                     <span
-                      >Created & deployed a
-                      <a href="https://labhras.link/6v8" target="_blank"
-                        >listener chat room web app</a
-                      >.</span
+                      >Created & deployed a <a href="https://wprbxmas-listener-chat.herokuapp.com/index.html">listener chat room</a> web app.
+                      </span
                     >
                   </li>
                   <ul>
@@ -759,9 +741,9 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   </ul>
                   <li class="resume_section_list_item">
                     <span
-                      >Utilized Jon Solomon’s Twitter feed & machine-learning
+                      >Utilized Jon Solomon's Twitter feed & machine-learning
                       program to create
-                      <a href="https://labhras.link/3i0" target="_blank"
+                      <a href="https://twitter.com/jonsolobot" target="_blank"
                         >Jon Solobot</a
                       >, a tweet-generating AI.</span
                     >
@@ -774,14 +756,14 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                       /><span
                         >Python <span class="resume_deemphasize">(Twint)</span>,
                         GPT-2, &
-                        <a href="https://labhras.link/pfj" target="_blank"
+                        <a href="https://colab.research.google.com/drive/1qxcQ2A1nNjFudAGN_mcMOnvV9sF_PkEb" target="_blank"
                           >Colaboratory</a
                         >.</span
                       >
                     </li>
                   </ul>
                   <li class="resume_section_list_item">
-                    <span>Automated Jon Solobot’s tweets.</span>
+                    <span>Automated Jon Solobot's tweets.</span>
                   </li>
                   <ul>
                     <li>
@@ -790,7 +772,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                         class="stack"
                       /><span
                         >Twitter API &
-                        <a href="https://labhras.link/q7d" target="_blank"
+                        <a href="https://helgeklein.com/blog/2020/07/twitter-automation-scheduled-tweets-from-google-sheets/" target="_blank"
                           >Google Sheets</a
                         ></span
                       >.
@@ -801,7 +783,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
               <div class="resume_section_with_bullets">
                 <div class="resume_flex_title_and_date_wraps">
                   <span class="side_hustle"
-                    ><a href="https://labhras.link/wyb" target="_blank"
+                    ><a href="https://www.etsy.com/shop/FugitApparel" target="_blank"
                       >FUGIT APPAREL</a
                     ></span
                   >
@@ -820,11 +802,11 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   <li class="resume_section_list_item">
                     <span
                       >Designed & marketed
-                      <a href="https://labhras.link/44c" target="_blank"
+                      <a href="https://www.etsy.com/listing/683262816/havertown-irish-pride-womens-v-neck?ref=shop_home_recs_1" target="_blank"
                         >Havertown Pride tee</a
                       >
                       &
-                      <a href="https://labhras.link/20fb66" target="_blank"
+                      <a href="https://www.etsy.com/listing/683259856/hitchbot-commemorative-t-shirt-keep?ref=shop_home_recs_2" target="_blank"
                         >hitchBOT Commemorative tee</a
                       >.</span
                     >
@@ -833,7 +815,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
               </div>
             </section>
             <section class="resume_section" id="interests_and_hobbies">
-              <h2><span>I</span>INTERESTS & HOBBIES</h2>
+              <h2>INTERESTS & HOBBIES</h2>
               <div class="resume_section_with_bullets">
                 <span>POLYMATHY</span>
                 <ul class="resume_section_list">
@@ -873,7 +855,7 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
                   <li class="resume_section_list_item">
                     <span>
                       I love
-                      <a href="https://labhras.link/n2w" target="_blank"
+                      <a href="https://open.spotify.com/playlist/6UWriLPcxPkx1XKFpHBvf5?si=e1IEtP3lTvKl53BuBNUrsA&nd=1" target="_blank"
                         >discovering new bands</a
                       >
                       & expanding my musical horizons.
@@ -890,455 +872,436 @@ let latestDiscoveryLink ="https://www.youtube.com/watch?v=-sXVjsijbcY"
             class="container--resume-col_2"
             id="container--resume-col_2_unwrapped"
           >
-            <section class="resume_section" id="experience">
-              <h2><span>E</span>EXPERIENCE</h2>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">FRONT-END WEB DEVELOPER</span>
-                  <span class="resume_dates"
-                    >JANUARY 2018 -
-                    <span class="clean_break_on_wrap">PRESENT</span></span
+          <section class="resume_section" id="experience">
+            <h2>EXPERIENCE</h2>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">FRONT-END WEB DEVELOPER</span>
+                <span class="resume_dates"
+                  >JANUARY 2018 -
+                  <span class="clean_break_on_wrap">PRESENT</span></span
+                >
+              </div>
+              <span class="employer"><a href="https://compatibleconnections.biz" target="_blank">COMPATIBLE CONNECTIONS</a></span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span>
+                    <a href="https://github.com/iamthelabhras/compatibleconnections.biz">(v3.0)</a>
+                    Site-wide rewrite/refactor using <a href="https://astro.build/" target="_blank">Astro SSG</a> & <a href="https://www.patterns.dev/posts/islands-architecture/" target="_blank">islands architecture</a>.
+                  </span>
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    />
+                    <span>
+                      <a href="https://astro.build" target="_blank">Astro</a>, HTML, CSS, Sass, JavaScript, Git, <a href="https://github.com/iamthelabhras" target="_blank">GitHub</a>, & Vite.
+                    </span>
+                  </li> 
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"/>
+                    <span>
+                      Standardized <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/styles">site CSS & CSS variables</a> using custom style guide.
+                    </span> 
+                  </li> 
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"/>
+                    <span>
+                      Converted unwieldy HTML into <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components"target="_blank">Astro components</a>.
+                    </span> 
+                  </li> 
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"/>
+                    <span>
+                      Used <a href="" target="_blank">JavaScript objects & functions</a> to store & dynamically inject data into site HTML.
+                    </span> 
+                  </li> 
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"/>
+                    <span>
+                      Drastically improved codebase's performance, maintainability, & legibility.
+                    </span> 
+                  </li> 
+                </ul>
+                <li class="resume_section_list_item">
+                  <span>
+                    <a href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components">(v2.0)</a>
+                    Designed, developed, & maintained a responsive site using foundational web technologies.
+                  </span>
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    />
+                    <span>
+                      HTML, CSS, Sass, JavaScript, Git, <a href="" target="_blank">GitHub</a>, & Parcel.
+                    </span>
+                  </li>
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"/>
+                    <span>
+                      CSS-only implementations of full-screen / thumbnail <a href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_inspirational_graphics.scss" target="_blank">image</a> & <a href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_dating_tips.scss" target="_blank">card</a> galleries.
+                    </span> 
+                  </li>
+                </ul>
+                <li class="resume_section_list_item">
+                  <span>
+                    <span>(v1.0)</span>
+                    Reviewed, refactored, & optimized “legacy” identikit site.
+                  </span>
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/stacked-files.svg"
+                      class="stack" />
+                    <span>
+                      WordPress & WordPress plugins (e.g. Elementor).
+                    </span>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">DIGITAL OPERATIONS LEAD</span>
+                <span class="resume_dates"
+                  >JANUARY 2019 -
+                  <span class="clean_break_on_wrap">PRESENT</span></span
+                >
+              </div>
+              <span class="employer"><a href="https://compatibleconnections.biz" target="_blank">COMPATIBLE CONNECTIONS</a></span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Lead head-to-toe rebrand of logo, digital
+                    assets, marketing materials, & client materials.</span
                   >
-                </div>
-                <span class="employer">COMPATIBLE CONNECTIONS</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Optimized “2.0” site stylesheets, images, & other digital
-                      assets using a CSS preprocessor & web application
-                      bundler.</span
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="/assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    />
+                    <span>
+                     Canva, <a href="https://en.eagle.cool/">Eagle</a>, & GIMP.
+                    </span>
+                  </li>
+                  </ul>
+                <li class="resume_section_list_item">
+                  <span
+                    >Designed custom e-mail templates for scheduling &
+                    appointments.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>HTML & CSS.</span>
+                  </li>
+                </ul>
+                <li class="resume_section_list_item">
+                  <span
+                    >Created, maintained, & audited a “database” to store
+                    mission-critical data & digital assets.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>CLI, Google Drive, & Linux (rsync).</span>
+                  </li>
+                </ul>
+                <li class="resume_section_list_item">
+                  <span
+                    >Utilized third-party marketing & scheduling tools to
+                    streamline mission-critical processes.</span>
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>MailChimp & Calendly.</span>
+                  </li>
+                </ul>
+                <li class="resume_section_list_item">
+                  <span
+                    >Designed social media graphics, posters, marketing
+                    materials, & other visual content.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>Canva & GIMP.</span>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">PROGRAM ASSOCIATE</span>
+                <span class="resume_dates"
+                  >MARCH 2017 -
+                  <span class="clean_break_on_wrap">DECEMBER 2017</span></span
+                >
+              </div>
+              <span class="employer"><a href="https://cdiphila.org/">CITIZEN DIPLOMACY INTERNATIONAL</a></span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Made complex administrative & financial arrangements for
+                    State Department-sponsored international delegations,
+                    international trade delegations, & official Sister Cities
+                    visits.</span
+                  >
+                </li>
+                <li class="resume_section_list_item">
+                  <span
+                    >Documented, streamlined & improved Program-related
+                    processes using local & cloud-based tools.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>Gmail, Sortd, Boomerang, Trello, & Buffer.</span>
+                  </li>
+                </ul>
+                <li class="resume_section_list_item">
+                  <span
+                    >Maintained, updated, & audited operational & financial
+                    databases & spreadsheets; generated
+                    <span class="text_emphasis">ad hoc</span> reports for
+                    Director of Programs & CEO.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>Google Sheets & Proprietary Databases.</span>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">DIGITAL MARKETING COORDINATOR</span>
+                <span class="resume_dates"
+                  >JANUARY 2016 -
+                  <span class="clean_break_on_wrap">FEBRUARY 2017</span></span
+                >
+              </div>
+              <span class="employer">COMPATIBLE CONNECTIONS</span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Collaborated with owner-operator to draft online
+                    marketing materials.</span
+                  >
+                </li>
+                <li class="resume_section_list_item">
+                  <span
+                    >Created social media marketing calendar, Facebook ad
+                    campaigns, & landing pages to drive increased site traffic
+                    & lead generation.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>Unbounce.</span>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">ADJUNCT PROFESSOR</span>
+                <span class="resume_dates"
+                  >AUGUST 2014 -
+                  <span class="clean_break_on_wrap">DECEMBER 2015</span></span
+                >
+              </div>
+              <span class="employer">VILLANOVA UNIVERSITY</span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Designed & implemented all aspects of an
+                    introductory-level course, including syllabus, lectures,
+                    assignment rotation, & exams.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"
+                    /><span
+                      >Received top marks for quality of instruction,
+                      responsiveness, & learning outcomes in both internal
+                      (CATs) & external (RateMyProfessor) performance
+                      reviews.</span
                     >
                   </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span> Sass & Parcel.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Designed, developed, & maintained a
-                      <a href="https://labhras.link/kwm" target="_blank"
-                        >customized, fully responsive "2.0" website</a
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">ACCOUNTING & FINANCE INTERN</span>
+                <span class="resume_dates"
+                  >MARCH 2014 -
+                  <span class="clean_break_on_wrap">JUNE 2014</span></span
+                >
+              </div>
+              <span class="employer">ENVIROKURE</span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Optimized & audited start-up firm's financial
+                    models.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span> Microsoft Excel. </span>
+                  </li>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"
+                    /><span
+                      >Collaborated with firm's financial team to create a
+                      “seasonality matrix” that accurately modeled month-
+                      over-month changes in inventory, manufacturing
+                      costs, & projected sales.</span
+                    >
+                  </li>
+                </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">MBA FELLOW</span>
+                <span class="resume_dates"
+                  >JANUARY 2012 -
+                  <span class="clean_break_on_wrap">DECEMBER 2013</span></span
+                >
+              </div>
+              <span class="employer">VILLANOVA UNIVERSITY</span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >Gathered qualitative & quantitative data in support of
+                    professors' changing research agendas; analyzed data to
+                    produce literature reviews, causal models, &
+                    recommendations for future research; collaborated with
+                    professors to produce scholarly articles & conference
+                    presentations.</span
+                  >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"
+                    /><span
+                      ><span class="text_emphasis"
+                        >Information Systems Management</span
+                      >
+                      (30.4),
+                      <a href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2013.832965" target="_blank"
+                        >“A Framework for E-Discovery of Social Media Content
+                        Within the United States”</a
                       >.</span
                     >
                   </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>
-                        HTML, CSS, JavaScript, jQuery, Git, & Github.</span
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/promotion.svg"
+                      class="megaphone"
+                    /><span
+                      ><span class="text_emphasis"
+                        >Information Systems Management</span
                       >
-                    </li>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >CSS-only implementations of an
-                        <a href="https://labhras.link/e1t" target="_blank"
-                          >image</a
-                        >
-                        /
-                        <a href="https://labhras.link/5e1feb" target="_blank"
-                          >card</a
-                        >
-                        gallery.
-                      </span>
-                    </li>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >CSS-only implementation of a
-                        <a href="https://labhras.link/0c528f" target="_blank"
-                          >left-to-right scrollable Grid "carousel"</a
-                        >
-                        with CSS artwork & animations.</span
-                      >
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Created / manipulated all images on 2.0 website & aligned
-                      them with site’s brand identity.</span
+                      (29.4),
+                      <a href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716995" target="_blank"
+                        >“The E-Commerce Sales & Use Tax Controversy: Is The
+                        End Near?”</a
+                      >.</span
                     >
                   </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>GIMP.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Re-designed & re-developed business' "legacy" identikit
-                      website.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span
-                        >WordPress & WordPress plugins
-                        <span class="resume_deemphasize"
-                          >(e.g. Elementor).</span
-                        ></span
-                      >
-                    </li>
-                  </ul>
                 </ul>
-              </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">DIGITAL OPERATIONS LEAD</span>
-                  <span class="resume_dates"
-                    >JANUARY 2019 -
-                    <span class="clean_break_on_wrap">PRESENT</span></span
+                <li class="resume_section_list_item">
+                  <span
+                    >Gathered firm financial data; imported &
+                    modeled financial data; performed initial financial
+                    analyses.</span
                   >
-                </div>
-                <span class="employer"> COMPATIBLE CONNECTIONS</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Lead head-to-toe rebrand of business' logo, digital
-                      assets, marketing materials, & client materials.</span
-                    >
+                </li>
+                <ul>
+                  <li>
+                    <img
+                      src="../../assets/images/my_work/resume/stacked-files.svg"
+                      class="stack"
+                    /><span>
+                      Bloomberg, CRSP, Compustat, & Microsoft Excel.
+                    </span>
                   </li>
-
-                  <li class="resume_section_list_item">
-                    <span
-                      >Designed custom e-mail templates for scheduling &
-                      appointments.</span
-                    >
-                  </li>
-
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>HTML & CSS.</span>
-                    </li>
-                  </ul>
-
-                  <li class="resume_section_list_item">
-                    <span
-                      >Created, maintained, & audited a “database” to store
-                      business’ critical data & digital assets.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>Google Drive.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Utilized third-party marketing & scheduling platforms to
-                      streamline & improve existing processes & more tightly
-                      integrate them into business’ website.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>MailChimp & Calendly.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Designed social media graphics, posters, marketing
-                      materials, & other visual content.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>Canva & GIMP.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span>Automated regular site & database backups.</span>
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span
-                        >WordPress Plugins
-                        <span class="resume_deemphasize"
-                          >(i.e. BackupGuard)</span
-                        >
-                        & iTerm2
-                        <span class="resume_deemphasize"
-                          >(i.e. cronjobs).</span
-                        ></span
-                      >
-                    </li>
-                  </ul>
                 </ul>
+              </ul>
+            </div>
+            <div class="resume_section_with_bullets">
+              <div class="resume_flex_title_and_date_wraps">
+                <span class="job_title">RESEARCH & TEACHING ASSISTANT</span>
+                <span class="resume_dates"
+                  >AUGUST 2007 -
+                  <span class="clean_break_on_wrap">JUNE 2011</span></span
+                >
               </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">PROGRAM ASSOCIATE</span>
-                  <span class="resume_dates"
-                    >MARCH 2017 -
-                    <span class="clean_break_on_wrap">DECEMBER 2017</span></span
+              <span class="employer">VARIOUS UNIVERSITIES</span>
+              <ul class="resume_section_list">
+                <li class="resume_section_list_item">
+                  <span
+                    >See “Education” section of this resume for more
+                    details.</span
                   >
-                </div>
-                <span class="employer">CITIZEN DIPLOMACY INTERNATIONAL</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Made complex administrative & financial arrangements for
-                      State Department-sponsored international delegations,
-                      international trade delegations, & official Sister Cities
-                      visits.</span
-                    >
-                  </li>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Documented, streamlined & improved Program-related
-                      processes using local & cloud-based tools.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>Gmail, Sortd, Boomerang, Trello, & Buffer.</span>
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Maintained, updated, & audited operational & financial
-                      databases & spreadsheets; generated
-                      <span class="text_emphasis">ad hoc</span> reports for
-                      Director of Programs & CEO.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>Google Sheets & Proprietary Databases.</span>
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">DIGITAL MARKETING COORDINATOR</span>
-                  <span class="resume_dates"
-                    >JANUARY 2016 -
-                    <span class="clean_break_on_wrap">FEBRUARY 2017</span></span
-                  >
-                </div>
-                <span class="employer">COMPATIBLE CONNECTIONS</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Collaborated with owner-operator to draft online
-                      marketing materials.</span
-                    >
-                  </li>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Created social media marketing calendar, Facebook ad
-                      campaigns, & landing pages to drive increased site traffic
-                      & lead generation.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>Unbounce.</span>
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">ADJUNCT PROFESSOR</span>
-                  <span class="resume_dates"
-                    >AUGUST 2014 -
-                    <span class="clean_break_on_wrap">DECEMBER 2015</span></span
-                  >
-                </div>
-                <span class="employer">VILLANOVA UNIVERSITY</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Designed & implemented all aspects of an
-                      introductory-level course, including syllabus, lectures,
-                      assignment rotation, & exams.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >Received top marks for quality of instruction,
-                        responsiveness, & learning outcomes in both internal
-                        (CATs) & external (RateMyProfessor) performance
-                        reviews.</span
-                      >
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">ACCOUNTING & FINANCE INTERN</span>
-                  <span class="resume_dates"
-                    >MARCH 2014 -
-                    <span class="clean_break_on_wrap">JUNE 2014</span></span
-                  >
-                </div>
-                <span class="employer">ENVIROKURE</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Optimized & audited start-up firm’s financial
-                      models.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span> Microsoft Excel. </span>
-                    </li>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        >Collaborated with firm’s financial adviser to create a
-                        “seasonality matrix” that accurately modeled
-                        month-over-month changes in firm’s inventory,
-                        manufacturing costs, & projected sales.</span
-                      >
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">MBA FELLOW</span>
-                  <span class="resume_dates"
-                    >JANUARY 2012 -
-                    <span class="clean_break_on_wrap">DECEMBER 2013</span></span
-                  >
-                </div>
-                <span class="employer">VILLANOVA UNIVERSITY</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >Gathered qualitative & quantitative data in support of
-                      professors’ changing research agendas; analyzed data to
-                      produce literature reviews, causal models, &
-                      recommendations for future research; collaborated with
-                      professors to produce scholarly articles & conference
-                      presentations.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        ><span class="text_emphasis"
-                          >Information Systems Management</span
-                        >
-                        (30.4),
-                        <a href="https://labhras.link/5135be" target="_blank"
-                          >“A Framework for E-Discovery of Social Media Content
-                          Within the United States”</a
-                        >.</span
-                      >
-                    </li>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/promotion.svg"
-                        class="megaphone"
-                      /><span
-                        ><span class="text_emphasis"
-                          >Information Systems Management</span
-                        >
-                        (29.4),
-                        <a href="https://labhras.link/0b598b" target="_blank"
-                          >“The E-Commerce Sales & Use Tax Controversy: Is The
-                          End Near?”</a
-                        >.</span
-                      >
-                    </li>
-                  </ul>
-                  <li class="resume_section_list_item">
-                    <span
-                      >Gathered firm financial performance data; imported &
-                      modeled financial data; performed initial financial
-                      analyses.</span
-                    >
-                  </li>
-                  <ul>
-                    <li>
-                      <img
-                        src="../../assets/images/my_work/resume/stacked-files.svg"
-                        class="stack"
-                      /><span>
-                        Bloomberg, CRSP, Compustat, & Microsoft Excel.
-                      </span>
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-
-              <div class="resume_section_with_bullets">
-                <div class="resume_flex_title_and_date_wraps">
-                  <span class="job_title">RESEARCH & TEACHING ASSISTANT</span>
-                  <span class="resume_dates"
-                    >AUGUST 2007 -
-                    <span class="clean_break_on_wrap">JUNE 2011</span></span
-                  >
-                </div>
-                <span class="employer">VARIOUS UNIVERSITIES</span>
-                <ul class="resume_section_list">
-                  <li class="resume_section_list_item">
-                    <span
-                      >See “Education” section of this resume for more
-                      details.</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </section>
+                </li>
+              </ul>
+            </div>
+          </section>
           </div>
         </div>
       </div>

@@ -137,21 +137,15 @@ div.container--resume_columns {
 
 section.resume_section {
   h2 {
+    position: relative;
     width: var(--width__resume_section_h2);
     margin-bottom: 10px;
+    padding: 10px 25px;
     background: red;
     font-family: "resume_main_text", "Century Gothic", “Apple Gothic”,
       AppleGothic, “URW Gothic L”, “Avant Garde”, Futura, sans-serif;
     font-size: var(--font_size__section_titles);
     font-weight: 800;
-
-    span {
-      display: inline-block;
-      margin-right: 15px;
-      padding: 10px;
-      background: black;
-      color: white;
-    }
   }
 
   span {
