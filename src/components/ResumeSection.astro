@@ -1,0 +1,10 @@
+---
+
+const { sectionID, sectionName } = Astro.props;
+
+---
+
+<section class="resume_section" id={sectionID}>
+  <h2>{sectionName}</h2>
+    <slot />
+</section>
