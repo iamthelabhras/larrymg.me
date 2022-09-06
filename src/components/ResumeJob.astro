@@ -1,0 +1,36 @@
+---
+const {
+  jobTitle,
+  jobStartDate,
+  jobEndDate,
+  jobEmployerLink = false,
+  jobEmployerLinkTitle,
+  jobEmployer,
+} = Astro.props;
+---
+
+<div class="resume__job">
+  <hgroup>
+    <h3 class="resume__job_title">
+      {jobTitle}
+    </h3>
+    {
+      jobEmployerLink ? (
+        <span class="resume__employer">
+          <a
+            title={jobEmployerLinkTitle}
+            href={jobEmployerLink}
+            target="_blank"
+          >
+            {jobEmployer}
+          </a>
+        </span>
+      ) : (
+        <span class="resume__employer">{jobEmployer}</span>
+      )
+    }
+  </hgroup>
+  <span class="resume__job_dates">
+    {jobStartDate} - {jobEndDate}
+  </span>
+</div>

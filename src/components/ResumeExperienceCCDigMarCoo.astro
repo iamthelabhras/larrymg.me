@@ -1,0 +1,27 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="Digital Marketing Coordinator"
+  jobStartDate="1/2016"
+  jobEndDate="2/2017"
+  jobEmployerLink="https://compatibleconnections.biz"
+  jobEmployerLinkTitle="Links to: Compatible Connections' website."
+  jobEmployer="Compatible Connections"
+/>
+<Bullets>
+  <Bullet>
+    Collaborated with owner-operator to draft online marketing materials.
+  </Bullet>
+  <Bullet>
+    Created social media marketing calendar, Facebook ad campaigns, & landing
+    pages to drive increased site traffic & lead generation.
+    <ul>
+      <Stack>Unbounce.</Stack>
+    </ul>
+  </Bullet>
+</Bullets>

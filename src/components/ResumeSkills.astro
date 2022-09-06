@@ -1,0 +1,64 @@
+---
+import ResumeSection from "./ResumeSection.astro";
+import SkillSet from "./ResumeSkillSet.astro";
+---
+
+<ResumeSection sectionID="skills" sectionName="skills">
+  <SkillSet skillSet="Web Dev" skills="HTML, CSS, Sass, JavaScript, & Astro">
+    <img
+      src="../../assets/images/my_work/resume/html.svg"
+      alt="HTML5 Icon"
+      slot="skill_icons"
+    /><img
+      src="../../assets/images/my_work/resume/css-3.svg"
+      alt="CSS 3 Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/sass.png"
+      alt="Sass Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/javascript.svg"
+      alt="Vanilla JavaScript Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/astro.png"
+      alt="Astro Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+  <SkillSet skillSet="Version Control" skills="Git & GitHub">
+    <img
+      src="../../assets/images/my_work/resume/git.svg"
+      alt="Git Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/github.svg"
+      alt="Github Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+  <SkillSet skillSet="IDEs" skills="Neovim & VSCode">
+    <img
+      src="../../assets/images/my_work/resume/neovim.png"
+      alt="Neovim Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/vs_code.png"
+      alt="VSCode Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+  <SkillSet skillSet="Image Manipulation" skills="GIMP">
+    <img
+      src="../../assets/images/my_work/resume/gimp.png"
+      alt="GIMP Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+</ResumeSection>

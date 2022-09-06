@@ -1,0 +1,36 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="Program Associate"
+  jobStartDate="3/2017"
+  jobEndDate="12/2017"
+  jobEmployerLink="https://cdiphila.org/"
+  jobEmployerLinkTitle="Links to: Citizen Diplomacy International's homepage."
+  jobEmployer="Citizen Diplomacy International"
+/>
+<Bullets>
+  <Bullet>
+    Made complex administrative & financial arrangements for State
+    Department-sponsored international delegations, international trade
+    delegations, & official Sister Cities visits.
+  </Bullet>
+  <Bullet>
+    Documented, streamlined & improved Program-related processes using local &
+    cloud-based tools.
+    <ul>
+      <Stack>Gmail, Sortd, Boomerang, Trello, & Buffer.</Stack>
+    </ul>
+  </Bullet>
+  <Bullet>
+    Maintained, updated, & audited operational & financial databases &
+    spreadsheets; generated ad hoc reports for Director of Programs & CEO.
+    <ul>
+      <Stack>Google Sheets & Proprietary Databases.</Stack>
+    </ul>
+  </Bullet>
+</Bullets>

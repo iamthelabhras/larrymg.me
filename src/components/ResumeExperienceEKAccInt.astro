@@ -1,0 +1,29 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+import Megaphone from "./ResumeMegaphone.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="Accounting & Finance Intern"
+  jobStartDate="3/2014"
+  jobEndDate="6/2014"
+  jobEmployerLink="https://www.envirokure.com/company"
+  jobEmployerLinkTitle="Links to: The About section of EnviroKure's homepage."
+  jobEmployer="EnviroKure"
+/>
+<Bullets>
+  <Bullet>
+    Optimized & audited start-up firm's financial models.
+    <ul>
+      <Stack>Microsoft Excel.</Stack>
+      <Megaphone>
+        Collaborated with firm's financial team to create a “seasonality matrix”
+        that accurately modeled month- over-month changes in inventory,
+        manufacturing costs, & projected sales.
+      </Megaphone>
+    </ul>
+  </Bullet>
+</Bullets>

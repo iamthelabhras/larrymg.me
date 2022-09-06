@@ -1,0 +1,24 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+// Last updated: 7/19/22.
+let currentlyStudyingImage = "../../assets/images/my_work/resume/mushrooms.svg";
+let currentlyStudyingSubject = "Mycology";
+---
+
+<h3>Polymathy</h3>
+<Bullets>
+  <Bullet>
+    My life goal is to learn as much as I can about as many things as possible,
+    including
+    <span class="text_emphasis">how</span> to learn.
+  </Bullet>
+  <Bullet>
+    <div id="resume__currently_studying">
+      <span>In my free time, I'm currently studying:</span>
+      <img src={currentlyStudyingImage} />
+      <span>{currentlyStudyingSubject}</span>
+      <img src={currentlyStudyingImage} />
+    </div>
+  </Bullet>
+</Bullets>

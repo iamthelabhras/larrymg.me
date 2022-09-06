@@ -1,0 +1,100 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+import Megaphone from "./ResumeMegaphone.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="Front-End Developer"
+  jobStartDate="1/2018"
+  jobEndDate="Present"
+  jobEmployerLink="https://compatibleconnections.biz"
+  jobEmployerLinkTitle="Links to: Compatible Connections' website."
+  jobEmployer="Compatible Connections"
+/>
+<Bullets>
+  <Bullet
+    >Solo developer responsible for <em>three consecutive iterations</em> (v3.0,
+    v2.0, v1.0) of employer's website.</Bullet
+  >
+  <Bullet
+    ><a
+      title="Links to: Compatible Connections' current (v3.0) website."
+      href="https://github.com/iamthelabhras/compatibleconnections.biz"
+      target="_blank">(v3.0)</a
+    >: Site-wide rewrite/refactor using <a
+      href="https://astro.build"
+      title="Links to: Astro JavaScript framework's project page."
+      target="_blank">Astro JavaScript framework</a
+    > & <a
+      title="Links to: Article explaining what islands architecture is, as well as its pro's & con's."
+      href="https://www.patterns.dev/posts/islands-architecture/"
+      target="_blank">islands architecture</a
+    >.
+    <ul>
+      <Stack
+        ><a
+          href="https://www.youtube.com/watch?v=gxBkghlglTg"
+          title="Links to: Short (~3 min.) video explaining the Astro framework."
+          target="_blank">Astro</a
+        >, HTML, CSS, Sass, JavaScript, Git, GitHub, & Vite.</Stack
+      >
+      <Megaphone>
+        Standardized site <a
+          href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/styles"
+          title="Links to: GitHub repo folder containing Compatible Connections v3.0's standardized Sass."
+          target="_blank">CSS & CSS variables</a
+        > using custom style guide.
+      </Megaphone>
+      <Megaphone
+        >Converted unwieldy HTML into <a
+          title="Links to: GitHub repo folder containing Compatible Connections v3.0's Astro components."
+          href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components"
+          >Astro components</a
+        >.</Megaphone
+      >
+      <Megaphone>
+        Used <a
+          title="Links to: Github repo file containing an demonstration of how JS objects & functions were used to dynamically inject HTML into Compatible Connections v3.0."
+          href="https://github.com/iamthelabhras/compatibleconnections.biz/blob/main/src/js/dating_tips.js"
+          target="_blank">JavaScript objects & functions</a
+        > to store & dynamically inject data into site HTML.
+      </Megaphone>
+      <Megaphone>
+        Drastically improved codebase's performance, maintainability, &
+        legibility.
+      </Megaphone>
+    </ul>
+  </Bullet>
+  <Bullet>
+    <a
+      title="Links to: Compatible Connections' v2.0 GitHub repo."
+      href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-"
+      target="_blank">(v2.0)</a
+    >: Designed, developed, & maintained a custom-coded, fully responsive site
+    using foundational web technologies.
+    <ul>
+      <Stack>HTML, CSS, Sass, JavaSript, Git, GitHub, & Parcel.</Stack>
+      <Megaphone
+        >CSS-only implementations of full-screen / thumbnail <a
+          title="Link to: GitHub file demonstrating full-screen / thumbnail implementation of image gallery."
+          href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_inspirational_graphics.scss"
+          >image</a
+        > & <a
+          title="Link to: GitHub file demonstrating full-screen / thumbnail implementation of card gallery."
+          href="https://github.com/iamthelabhras/compatibleconnections.biz___ARCHIVED-/blob/main/src/scss/pages/_dating_tips.scss"
+          target="_blank">card</a
+        >
+        galleries.</Megaphone
+      >
+    </ul>
+  </Bullet>
+  <Bullet>
+    (v1.0): Reviewed, refactored, & optimized "legacy" identikit site.
+    <ul>
+      <Stack>WordPress & WordPress plugins (e.g. Elementor).</Stack>
+    </ul>
+  </Bullet>
+</Bullets>
