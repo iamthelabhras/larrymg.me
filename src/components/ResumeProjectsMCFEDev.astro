@@ -1,0 +1,70 @@
+---
+import Job from "./ResumeJob.astro";
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+---
+
+<Job
+  jobTitle="Front-End Developer"
+  jobStartDate="11/2020"
+  jobEndDate="Present"
+  jobEmployerLink="https://marathon.christmas"
+  jobEmployerLinkTitle="Links to: Marathon Christmas' website."
+  jobEmployer="Marathon Christmas"
+/>
+<Bullets>
+  <Bullet>
+    Designed, developed, & mantained fan website for <a
+      title="Links to: Jon Solomon's personal website."
+      href="https://keepingscoreathome.com/"
+      target="_blank">WPRB DJ Jon Solomon</a
+    >'s <a
+      title="Links to: Communty News article profiling Jon Solomon's 25-hour Christmas marathon."
+      href="https://communitynews.org/2020/12/01/jon-solomon-brings-wprb-music-marathon-home-for-the-holidays/"
+      target="_blank">annual 25-hour Christmas marathon</a
+    >.
+    <ul>
+      <Stack>HTML, CSS, & JavaScript.</Stack>
+    </ul>
+  </Bullet>
+  <Bullet>
+    Created & deployed a <a
+      title="Links to: Listener chat room web app."
+      href="https://wprbxmas-listener-chat.herokuapp.com/index.html"
+      target="_blank">listener chat room web app</a
+    >.
+    <ul>
+      <Stack>Express.js, Socket.io, & Heroku.</Stack>
+    </ul>
+  </Bullet>
+  <Bullet>
+    Utilized Jon Solomon's Twitter feed & machine-learning program to create
+    <a
+      title="Links to Jon Solobot's Twitter feed."
+      href="https://twitter.com/jonsolobot"
+      target="_blank">Jon Solobot</a
+    >, a tweet-generating AI.
+    <ul>
+      <Stack
+        >Python (Twint), GPT-2, & <a
+          title="Links to: Max Woolf's step-by-step instructions for train a GPT-2 Models using Tweets and Google Colaboratory."
+          href="https://colab.research.google.com/drive/1qxcQ2A1nNjFudAGN_mcMOnvV9sF_PkEb"
+          target="_blank">Colaboratory</a
+        >.</Stack
+      >
+    </ul>
+  </Bullet>
+  <Bullet>
+    Automated Jon Solobot's tweets.
+    <ul>
+      <Stack
+        >Twitter API & <a
+          title="Links to: Helge Klein's article explaining how to automate Tweets using Google Sheets."
+          href="https://helgeklein.com/blog/2020/07/twitter-automation-scheduled-tweets-from-google-sheets/"
+          target="_blank">Google Sheets</a
+        >.</Stack
+      >
+    </ul>
+  </Bullet>
+</Bullets>

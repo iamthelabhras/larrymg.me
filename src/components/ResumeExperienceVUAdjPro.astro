@@ -1,0 +1,31 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Megaphone from "./ResumeMegaphone.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="Adjunct Professor"
+  jobStartDate="8/2014"
+  jobEndDate="12/2015"
+  jobEmployerLink="https://www.villanova.edu"
+  jobEmployerLinkTitle="Links to: Villanova University's homepage."
+  jobEmployer="Villanova University"
+/>
+<Bullets>
+  <Bullet>
+    Designed & implemented all aspects of an introductory-level course,
+    including syllabus, lectures, assignment rotation, & exams.
+    <ul>
+      <Megaphone>
+        Received top marks for quality of instruction, responsiveness, &
+        learning outcomes in both internal (CATs) & external (<a
+          title="Links to: Labhras' RateMyProfessor profile."
+          href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=1943877"
+          target="_blank">RateMyProfessor</a
+        >) performance reviews.
+      </Megaphone>
+    </ul>
+  </Bullet>
+</Bullets>

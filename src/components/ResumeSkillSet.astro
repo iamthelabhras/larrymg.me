@@ -1,0 +1,13 @@
+---
+const { skillSet, skills } = Astro.props;
+---
+
+<div class="skill_set">
+  <hgroup>
+    <h3>{skillSet}</h3>
+    <div>
+      <slot name="skill_icons" />
+    </div>
+  </hgroup>
+  <span>{skills}</span>
+</div>

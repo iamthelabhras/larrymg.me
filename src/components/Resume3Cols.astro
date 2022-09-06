@@ -1,0 +1,49 @@
+---
+const {
+  column1,
+  column1Link = false,
+  column1LinkTitle,
+  column2,
+  column2Link = false,
+  column2LinkTitle,
+  column3,
+  column3Link = false,
+  column3LinkTitle,
+} = Astro.props;
+---
+
+<div class="resume__3cols">
+  {
+    column1Link ? (
+      <span>
+        <a title={column1LinkTitle} href={column1Link} target="_blank">
+          {column1}
+        </a>
+      </span>
+    ) : (
+      <span>{column1}</span>
+    )
+  }
+  {
+    column2Link ? (
+      <span>
+        <a title={column2LinkTitle} href={column2Link} target="_blank">
+          {column2}
+        </a>
+      </span>
+    ) : (
+      <span>{column2}</span>
+    )
+  }
+  {
+    column3Link ? (
+      <span>
+        <a title={column3LinkTitle} href={column3Link} target="_blank">
+          {column3}
+        </a>
+      </span>
+    ) : (
+      <span>{column3}</span>
+    )
+  }
+</div>

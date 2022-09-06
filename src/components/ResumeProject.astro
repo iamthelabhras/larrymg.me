@@ -1,0 +1,11 @@
+--- 
+
+const { projectName, projectStartDate, projectEndDate } = Astro.props;
+
+---
+
+<div class="resume__project">
+  <h3>{projectName}</h3>
+  <span>{projectStartDate} - {projectEndDate}</span>
+</div>
+<slot />

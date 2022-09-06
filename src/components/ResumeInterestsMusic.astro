@@ -1,0 +1,31 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+// Last updated: 7/19/22.
+let latestDiscovery = "Ramsey Lewis";
+let latestDiscoveryLink = "https://www.youtube.com/watch?v=DU6v4eX3Q3U";
+---
+
+<h3>Music</h3>
+<Bullets>
+  <Bullet>
+    I love
+    <a
+      title="Links to: Labhras' Liked & Shared Spotify Playlist."
+      href="https://open.spotify.com/playlist/6UWriLPcxPkx1XKFpHBvf5?si=e1IEtP3lTvKl53BuBNUrsA&nd=1"
+      target="_blank">discovering new bands</a
+    >
+    & expanding my musical horizons.
+  </Bullet>
+  <Bullet>
+    My latest musical discovery is: <span class="clean_break_on_wrap"
+      ><a
+        class="clean_break_on_wrap"
+        title="Links to: Ramsey Lewis' cover of 'Mother Nature's Son'."
+        href={latestDiscoveryLink}
+        target="_blank"
+        >{latestDiscovery}
+      </a>.
+    </span>
+  </Bullet>
+</Bullets>

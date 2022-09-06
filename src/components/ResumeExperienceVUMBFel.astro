@@ -1,0 +1,49 @@
+---
+import Bullets from "./ResumeBullets.astro";
+import Bullet from "./ResumeBullet.astro";
+import Stack from "./ResumeStack.astro";
+import Megaphone from "./ResumeMegaphone.astro";
+import Job from "./ResumeJob.astro";
+---
+
+<Job
+  jobTitle="MBA Fellow"
+  jobStartDate="1/2012"
+  jobEndDate="12/2013"
+  jobEmployerLink="https://www1.villanova.edu/university/business/academics/graduate-programs/mba/professional-mba/fellowship-program.html"
+  jobEmployerLinkTitle="Links to: Overview of Villanova School of Business' MBA Fellowship program."
+  jobEmployer="Villanova University"
+/>
+<Bullets>
+  <Bullet>
+    Gathered qualitative & quantitative data in support of professors' changing
+    research agendas; analyzed data to produce literature reviews, causal
+    models, & recommendations for future research; collaborated with professors
+    to produce scholarly articles & conference presentations.
+    <ul>
+      <Megaphone>
+        <i>Information Systems Management</i> (30.4), <a
+          title="Links to: Article abstraction."
+          href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2013.832965"
+          >“A Framework for E-Discovery of Social Media Content Within the
+          United States”</a
+        >.
+      </Megaphone>
+      <Megaphone>
+        <i>Information Systems Management</i> (29.4), <a
+          title="Links to: Article abstract."
+          href="https://www.tandfonline.com/doi/abs/10.1080/10580530.2012.716995"
+          target="_blank"
+          >“The E-Commerce Sales & Use Tax Controversy: Is The End Near?”</a
+        >.
+      </Megaphone>
+    </ul>
+  </Bullet>
+  <Bullet>
+    Gathered firm financial data; imported & modeled financial data; performed
+    initial financial analyses.
+    <ul>
+      <Stack>Bloomberg, CRSP, Compustat, & Microsoft Excel.</Stack>
+    </ul>
+  </Bullet>
+</Bullets>

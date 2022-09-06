@@ -1,10 +1,10 @@
 ---
-
 const { sectionID, sectionName } = Astro.props;
-
 ---
 
-<section class="resume_section" id={sectionID}>
+<section id={sectionID}>
   <h2>{sectionName}</h2>
+  <div class="resume__section_content">
     <slot />
+  </div>
 </section>
