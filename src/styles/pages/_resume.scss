@@ -475,6 +475,12 @@ div.resume__container_grid {
       // Prevents unsightly, legibility-reducing span "collisions".
       // Third column does not need padding; no column to collide with!
       ////
+      &:last-of-type {
+        span {
+          margin-bottom: 0;
+        }
+      }
+      ////
       span {
         &:first-of-type,
         &:nth-of-type(2) {
