@@ -377,12 +377,13 @@ div.resume__container_grid {
       ////
       div.resume__3cols {
         align-items: center;
+        padding-right: 0 !important;
         text-align: center;
       }
     }
     ///
     // Section-specific styles applied at section-specific breakpoint.
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 646px) {
       ////
       div.resume__section_content {
         // Reflow flexbox when degrees get too close to each other.
