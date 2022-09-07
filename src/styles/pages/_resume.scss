@@ -533,6 +533,10 @@ div.resume__container_grid {
       flex-wrap: wrap;
       margin-bottom: 15px;
       ////
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      ////
       hgroup {
         display: flex;
         flex-wrap: wrap;
