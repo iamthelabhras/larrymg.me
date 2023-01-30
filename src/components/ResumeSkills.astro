@@ -4,7 +4,50 @@ import SkillSet from "./ResumeSkillSet.astro";
 ---
 
 <ResumeSection sectionID="skills" sectionName="skills">
-  <SkillSet skillSet="Web Dev" skills="HTML, CSS, Sass, JavaScript, & Astro">
+  <SkillSet
+    skillSet="Languages"
+    skills="JavaScript (Intermediate), TypeScript (Beginner)"
+  >
+    <img
+      src="../../assets/images/my_work/resume/javascript.svg"
+      alt="Vanilla JavaScript Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/typescript.png"
+      alt="Vanilla JavaScript Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+  <SkillSet
+    skillSet="JavaScript Libraries & Frameworks"
+    skills="Astro (Intermediate), React (Beginner), Vue (Beginner), Express.js (Beginner)"
+  >
+    <img
+      src="../../assets/images/my_work/resume/astro.png"
+      alt="Astro Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/react.svg"
+      alt="React Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/vue.png"
+      alt="Vue Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/express_js.png"
+      alt="Express.js Icon"
+      slot="skill_icons"
+    />
+  </SkillSet>
+  <SkillSet
+    skillSet="Fundamentals"
+    skills="HTML (Expert), CSS (Expert), Sass (Intermediate), JSON (Proficient), REST (Beginner)"
+  >
     <img
       src="../../assets/images/my_work/resume/html.svg"
       alt="HTML5 Icon"
@@ -20,29 +63,20 @@ import SkillSet from "./ResumeSkillSet.astro";
       slot="skill_icons"
     />
     <img
-      src="../../assets/images/my_work/resume/javascript.svg"
-      alt="Vanilla JavaScript Icon"
+      src="../../assets/images/my_work/resume/json.png"
+      alt="JSON Icon"
       slot="skill_icons"
     />
     <img
-      src="../../assets/images/my_work/resume/astro.png"
-      alt="Astro Icon"
+      src="../../assets/images/my_work/resume/rest_api.png"
+      alt="REST API Icon"
       slot="skill_icons"
     />
   </SkillSet>
-  <SkillSet skillSet="Version Control" skills="Git & GitHub">
-    <img
-      src="../../assets/images/my_work/resume/git.svg"
-      alt="Git Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/github.svg"
-      alt="Github Icon"
-      slot="skill_icons"
-    />
-  </SkillSet>
-  <SkillSet skillSet="IDEs" skills="Neovim & VSCode">
+  <SkillSet
+    skillSet="Dev Tools"
+    skills="Neovim (Intermediate), VS Code (Intermediate), Git / GitHub (Intermediate), GIMP (Proficient)"
+  >
     <img
       src="../../assets/images/my_work/resume/neovim.png"
       alt="Neovim Icon"
@@ -53,8 +87,16 @@ import SkillSet from "./ResumeSkillSet.astro";
       alt="VSCode Icon"
       slot="skill_icons"
     />
-  </SkillSet>
-  <SkillSet skillSet="Image Manipulation" skills="GIMP">
+    <img
+      src="../../assets/images/my_work/resume/git.svg"
+      alt="Git Icon"
+      slot="skill_icons"
+    />
+    <img
+      src="../../assets/images/my_work/resume/github.svg"
+      alt="Github Icon"
+      slot="skill_icons"
+    />
     <img
       src="../../assets/images/my_work/resume/gimp.png"
       alt="GIMP Icon"
