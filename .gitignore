@@ -26,5 +26,8 @@ public/assets/images/
 public/assets/pdfs/
 public/assets/video/
 
+# futurelog / not ready for git yet
+src/components/md/
+
 # misc
 keybase.txt
