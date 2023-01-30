@@ -1,14 +1,13 @@
 ---
-
 // Style Imports
-import '../styles/main.scss';
+import "../styles/main.scss";
 
 // Component Imports
 import StaticHead from "../components/StaticHead.astro";
 import Footer from "../components/Footer.astro";
 import Home from "../components/Home.astro";
 import ResumeHeader from "../components/ResumeHeader.astro";
-import ResumeObjective from "../components/ResumeObjective.astro";
+import ResumeSummary from "../components/ResumeSummary.astro";
 import ResumeExperience from "../components/ResumeExperience.astro";
 import ResumeEducation from "../components/ResumeEducation.astro";
 import ResumeCoursesAndCerts from "../components/ResumeCoursesAndCerts.astro";
@@ -16,7 +15,7 @@ import ResumeSkills from "../components/ResumeSkills.astro";
 import ResumeProjects from "../components/ResumeProjects.astro";
 import ResumeInterests from "../components/ResumeInterests.astro";
 
-// Framework Imports 
+// Framework Imports
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -27,18 +26,12 @@ import ResumeInterests from "../components/ResumeInterests.astro";
 let pageURL = "https://www.larrymg.me/resume.html";
 let title = "Labhrás (Larry) Mac Gabhann's Resume";
 let pageDescription = "";
-let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, front-end web developer, front end web developer, web developer, resume, available for hire, Philadelphia, CSS, Sass, Vite, Parcel, JavaScript, Git, Github, GIMP, Vim, VS Code, Astro, Vue.js, Vue";
-
-
-
-
-
+let pageKeywords =
+  "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann, Larry Mac Gabhann, front-end web developer, front end web developer, web developer, resume, available for hire, Philadelphia, CSS, Sass, Vite, Parcel, JavaScript, Git, Github, GIMP, Vim, VS Code, Astro, Vue.js, Vue";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
-
 ---
-
 
 <html lang="en">
   <head>
@@ -52,21 +45,21 @@ let pageKeywords = "Labhrás Mac Gabhann, Labhras Mac Gabhann, Larry MacGabhann,
     <meta property="og:url" content={pageURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={pageDescription} />
-    <StaticHead></StaticHead>
+    <StaticHead />
   </head>
   <body>
     <Home />
     <!-- Do not delete this main#id!  It's used in 0-to-1079px @media query. -->
     <main id="resume">
       <div class="resume__container_grid">
-          <ResumeHeader />
-          <ResumeObjective /> 
-          <ResumeExperience />
-          <ResumeEducation />
-          <ResumeCoursesAndCerts />
-          <ResumeSkills />
-          <ResumeProjects />
-          <ResumeInterests />
+        <ResumeHeader />
+        <ResumeSummary />
+        <ResumeExperience />
+        <ResumeEducation />
+        <ResumeCoursesAndCerts />
+        <ResumeSkills />
+        <ResumeProjects />
+        <ResumeInterests />
       </div>
     </main>
     <Footer />

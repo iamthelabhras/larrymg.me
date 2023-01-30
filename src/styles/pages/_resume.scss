@@ -5,7 +5,7 @@ main#resume {
   // Typography
   --font_size__header_name: 3.25rem;
   --font_size__section_heading: 2rem;
-  --font_size__objective: 1.3rem;
+  --font_size__summary: 1.3rem;
   --font_size__resume_dates: 0.875rem;
   --font_size__bullet: 0.95rem;
   --font_size__stack: 1.1rem;
@@ -56,7 +56,7 @@ section {
     margin: 0;
   }
   //
-  // Section heading (e.g. Objective, Education, etc.).
+  // Section heading (e.g. Summary, Education, etc.).
   // Do not delete "redudannt" padding, margin, etc.
   h2 {
     position: relative;
@@ -222,7 +222,7 @@ div.resume__container_grid {
   column-gap: 5rem;
   grid-template-areas:
     "header header"
-    "objective experience"
+    "summary experience"
     "education experience"
     "courses experience"
     "skills experience"
@@ -241,7 +241,7 @@ div.resume__container_grid {
     grid-template-rows: repeat(8, minmax(0.25fr, auto));
     grid-template-areas:
       "header"
-      "objective"
+      "summary"
       "skills"
       "courses"
       "experience"
@@ -335,8 +335,8 @@ div.resume__container_grid {
     }
   }
   //
-  section#objective {
-    grid-area: objective;
+  section#summary {
+    grid-area: summary;
     ///
     // Section-specific styles applied at CSS grid breakpoint.
     @media screen and (max-width: 1279px) {
@@ -362,7 +362,7 @@ div.resume__container_grid {
     ///
     p {
       max-width: 55ch;
-      font-size: var(--font_size__objective);
+      font-size: var(--font_size__summary);
     }
   }
   //
