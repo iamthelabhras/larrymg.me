@@ -5,7 +5,7 @@ main#resume {
   // Typography
   --font_size__header_name: 3.25rem;
   --font_size__section_heading: 2rem;
-  --font_size__summary: 1.3rem;
+  --font_size__summary: 1rem;
   --font_size__resume_dates: 0.875rem;
   --font_size__bullet: 0.95rem;
   --font_size__stack: 1.1rem;
@@ -338,31 +338,19 @@ div.resume__container_grid {
   section#summary {
     grid-area: summary;
     ///
-    // Section-specific styles applied at CSS grid breakpoint.
-    @media screen and (max-width: 1279px) {
-      ////
-      p {
-        margin: 0 auto;
-        max-width: 65ch !important;
-        text-align: center;
-        font-size: 1.6rem !important;
-      }
-    }
-    ///
-    // Section-specific styles at applied at section-specific breakpoints.
-    @media screen and (max-width: 720px) {
-      ////
-      p {
-        margin: 0 auto;
-        max-width: 65ch !important;
-        text-align: center;
-        font-size: 1.3rem !important;
-      }
+    div.resume__section_content {
+      display: grid;
+      place-items: center;
     }
     ///
     p {
-      max-width: 55ch;
+      max-width: 75ch;
+      padding: 0.5rem;
       font-size: var(--font_size__summary);
+      ////
+      &:first-of-type {
+        font-weight: 700;
+      }
     }
   }
   //
