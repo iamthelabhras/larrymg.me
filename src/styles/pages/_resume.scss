@@ -223,10 +223,10 @@ div.resume__container_grid {
   grid-template-areas:
     "header header"
     "summary experience"
-    "education experience"
-    "courses experience"
     "skills experience"
+    "courses experience"
     "projects experience"
+    "education experience"
     "interests experience";
   // Prevent resume from growing to ridiculous sizes on very large screens.
   max-width: 1600px;
