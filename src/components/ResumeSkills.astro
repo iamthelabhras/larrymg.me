@@ -1,106 +1,15 @@
 ---
-import ResumeSection from "./ResumeSection.astro";
-import SkillSet from "./ResumeSkillSet.astro";
+import Skills from "./ResumeSection.astro";
+import SkillSet from "./ResumeSkill.astro";
+import { languages } from "../js/skills";
+import { libraries } from "../js/skills";
+import { fundamentals } from "../js/skills";
+import { tools } from "../js/skills";
 ---
 
-<ResumeSection sectionID="skills" sectionName="skills">
-  <SkillSet
-    skillSet="Languages"
-    skills="JavaScript (Intermediate), TypeScript (Beginner)"
-  >
-    <img
-      src="../../assets/images/my_work/resume/javascript.svg"
-      alt="Vanilla JavaScript Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/typescript.png"
-      alt="Vanilla JavaScript Icon"
-      slot="skill_icons"
-    />
-  </SkillSet>
-  <SkillSet
-    skillSet="JavaScript Libraries & Frameworks"
-    skills="Astro (Intermediate), React (Beginner), Vue (Beginner), Express.js (Beginner)"
-  >
-    <img
-      src="../../assets/images/my_work/resume/astro.png"
-      alt="Astro Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/react.svg"
-      alt="React Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/vue.png"
-      alt="Vue Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/express_js.png"
-      alt="Express.js Icon"
-      slot="skill_icons"
-    />
-  </SkillSet>
-  <SkillSet
-    skillSet="Fundamentals"
-    skills="HTML (Expert), CSS (Expert), Sass (Intermediate), JSON (Proficient), REST (Beginner)"
-  >
-    <img
-      src="../../assets/images/my_work/resume/html.svg"
-      alt="HTML5 Icon"
-      slot="skill_icons"
-    /><img
-      src="../../assets/images/my_work/resume/css-3.svg"
-      alt="CSS 3 Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/sass.png"
-      alt="Sass Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/json.png"
-      alt="JSON Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/rest_api.png"
-      alt="REST API Icon"
-      slot="skill_icons"
-    />
-  </SkillSet>
-  <SkillSet
-    skillSet="Dev Tools"
-    skills="Neovim (Intermediate), VS Code (Intermediate), Git / GitHub (Intermediate), GIMP (Proficient)"
-  >
-    <img
-      src="../../assets/images/my_work/resume/neovim.png"
-      alt="Neovim Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/vs_code.png"
-      alt="VSCode Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/git.svg"
-      alt="Git Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/github.svg"
-      alt="Github Icon"
-      slot="skill_icons"
-    />
-    <img
-      src="../../assets/images/my_work/resume/gimp.png"
-      alt="GIMP Icon"
-      slot="skill_icons"
-    />
-  </SkillSet>
-</ResumeSection>
+<Skills sectionID="skills" sectionName="technical skills">
+  <SkillSet skillSetArray={languages} />
+  <SkillSet skillSetArray={libraries} />
+  <SkillSet skillSetArray={fundamentals} />
+  <SkillSet skillSetArray={tools} />
+</Skills>

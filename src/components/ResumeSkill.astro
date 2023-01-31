@@ -1,0 +1,28 @@
+---
+const { skillSetArray } = Astro.props;
+---
+
+<div class="skill_set">
+  <hgroup>
+    <h3>{skillSetArray[0]}</h3>
+    <div>
+      {
+        skillSetArray
+          .slice(1)
+          .map((skillObject) => (
+            <img src={skillObject.skillIcon} alt={skillObject.skillIconAlt} />
+          ))
+      }
+    </div>
+  </hgroup>
+  <ul>
+    {
+      skillSetArray.slice(1).map((skillObject, i, { length }) => (
+        <li class="clean_break_on_wrap">
+          {skillObject.skillName} <span>({skillObject.skillLevel})</span>
+          {i + 1 === length?<></>:<><span class="comma">,</span></>}
+        </li>
+      ))
+    }
+  </ul>
+</div>
