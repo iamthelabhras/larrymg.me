@@ -3,6 +3,7 @@ import Job from "./ResumeJob.astro";
 import Bullets from "./ResumeBullets.astro";
 import Bullet from "./ResumeBullet.astro";
 import Stack from "./ResumeStack.astro";
+import Megaphone from "./ResumeMegaphone.astro";
 ---
 
 <Job
@@ -13,9 +14,11 @@ import Stack from "./ResumeStack.astro";
   jobEmployerLinkTitle="Links to: Marathon Christmas' website."
   jobEmployer="Marathon Christmas"
 />
+
 <Bullets>
   <Bullet>
-    Designed, developed, & mantained fan website for <a
+    Solo developer responsive for two consecutive iterations (v1.0, v2.0) of fan
+    website for <a
       title="Links to: Jon Solomon's personal website."
       href="https://keepingscoreathome.com/"
       target="_blank">WPRB DJ Jon Solomon</a
@@ -24,10 +27,64 @@ import Stack from "./ResumeStack.astro";
       href="https://communitynews.org/2020/12/01/jon-solomon-brings-wprb-music-marathon-home-for-the-holidays/"
       target="_blank">annual 25-hour Christmas marathon</a
     >.
+  </Bullet>
+  <Bullet
+    ><a
+      title="Links to: Marathon Christmas' current (v2.0) website."
+      href="#"
+      target="_blank">(v2.0)</a
+    >: Site-wide rewrite/refactor using <a
+      href="https://astro.build"
+      title="Links to: Astro JavaScript framework's project page."
+      target="_blank">Astro JavaScript framework</a
+    > & <a
+      title="Links to: Article explaining what islands architecture is, as well as its pro's & con's."
+      href="https://www.patterns.dev/posts/islands-architecture/"
+      target="_blank">islands architecture</a
+    >.
     <ul>
-      <Stack>HTML, CSS, & JavaScript.</Stack>
+      <Stack
+        ><a
+          href="https://www.youtube.com/watch?v=gxBkghlglTg"
+          title="Links to: Short (~3 min.) video explaining the Astro framework."
+          target="_blank">Astro</a
+        >, HTML, CSS, Sass, JavaScript, Git, GitHub, & Vite.</Stack
+      >
+      <Megaphone>
+        Standardized site <a
+          href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/styles"
+          title="Links to: GitHub repo folder containing Compatible Connections v3.0's standardized Sass."
+          target="_blank">CSS & CSS variables</a
+        > using custom style guide.
+      </Megaphone>
+      <Megaphone
+        >Encapsulated HTML in resusable, easy-to-maintain <a
+          title="Links to: GitHub repo folder containing Compatible Connections v3.0's Astro components."
+          href="https://github.com/iamthelabhras/compatibleconnections.biz/tree/main/src/components"
+          >Astro components</a
+        >.</Megaphone
+      >
+      <Megaphone>
+        Used JavaScript objects & functions to store & dynamically inject data
+        into site HTML.
+      </Megaphone>
+      <Megaphone>
+        Drastically improved site's performance, maintainability, & legibility.
+      </Megaphone>
     </ul>
   </Bullet>
+  <Bullet
+    ><a
+      title="Links to: Marathon Christmas' old (v1.0) website."
+      href="#"
+      target="_blank">(v1.0)</a
+    >: Designed, developed, & maintained a custom-coded, fully responsive site
+    using foundational web technologies.
+    <ul>
+      <Stack>HTML, CSS, JavaScript, Git, GitHub, & Parcel.</Stack>
+    </ul>
+  </Bullet>
+
   <Bullet>
     Created & deployed a <a
       title="Links to: Listener chat room web app."
@@ -39,7 +96,7 @@ import Stack from "./ResumeStack.astro";
     </ul>
   </Bullet>
   <Bullet>
-    Utilized Jon Solomon's Twitter feed & machine-learning program to create
+    Created
     <a
       title="Links to Jon Solobot's Twitter feed."
       href="https://twitter.com/jonsolobot"
