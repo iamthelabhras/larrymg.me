@@ -652,6 +652,10 @@ div.resume__container_grid {
       margin: 0;
     }
     ///
+    /* 
+      Targets "solo developers response for three consecutive iterations" bullet test.
+      Probably a more elegant way to do this.
+    */
     ul.resume__bullets:first-of-type li.resume__bullet:first-of-type {
       font-weight: 800;
     }
