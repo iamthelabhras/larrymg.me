@@ -1,6 +1,6 @@
 export {iconPath, languages, libraries, fundamentals, tools };
 
-const iconPath = "./assets/images/my_work/resume/"
+const iconPath = "/assets/images/my_work/resume/"
 
 const languages = [
   "Languages",
