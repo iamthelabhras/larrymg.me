@@ -557,6 +557,25 @@ div.resume__container_grid {
           max-width: 100%;
         }
       }
+      ////
+      ul {
+        margin: 3px 0 0 0;
+        padding: 0;
+        /////
+        li {
+          padding-right: 5px;
+        }
+        /////
+        span {
+          font-size: 0.85rem;
+          font-style: italic;
+          //////
+          &.comma {
+            margin-left: -4px;
+            font-size: 0.75rem;
+          }
+        }
+      }
     }
   }
   //
