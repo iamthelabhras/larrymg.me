@@ -647,9 +647,11 @@ div.resume__container_grid {
   //
   section#experience {
     grid-area: experience;
+    ///
     @media screen and (max-width: 1279px) {
       margin: 0;
     }
+    ///
     ul.resume__bullets:first-of-type li.resume__bullet:first-of-type {
       font-weight: 800;
     }
